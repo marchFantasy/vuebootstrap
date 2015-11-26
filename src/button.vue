@@ -16,19 +16,15 @@ button(class='{{classes}}',type='{{type}}')
 </template>
 
 <script>
+
+import ButtonMixin from './mixin/ButtonMixin.js';
 export default{
+  mixins:[ButtonMixin],
   props:{
-    'bsStyle':{
-      type:String,
-      default:"default"
-    },
     'type':{
       type:String,
       default:"button"
     },
-    'size':{
-      type:String
-    }
   },
   computed:{
     bSize(){

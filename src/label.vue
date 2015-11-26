@@ -16,18 +16,14 @@ span.label(class='label-{{type}}')
 </template>
 <script>
   import VLink from './link.vue';
+  import LinkMixin from './mixin/linkMixin.js';
+
   export default{
+    mixins:[LinkMixin],
     props:{
       'type':{
         type:String,
         default:"default"
-      },
-      'href':{
-        type:String,
-        default:null
-      },
-      'target':{
-        type:String
       }
     },
     components:{

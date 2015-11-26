@@ -9,19 +9,12 @@
  * import VLink from 'link.vue';
  */
 <template lang="jade">
-  a(href='{{href}}',target='{{target}}')
+  a(href='{{href}}',target='{{target}}',v-bind:click='clickHandle')
     slot
 </template>
 <script>
+import LinkMixin from './mixin/linkMixin.js';
 export default{
-  props:{
-    'href':{
-      type:String,
-      default:null
-    },
-    'target':{
-      type:String
-    }
-  }
+  mixins:[LinkMixin]
 }
 </script>

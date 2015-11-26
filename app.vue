@@ -28,8 +28,25 @@ div.container
     h4 下拉框
     dropdown-button(title='下拉框',v-bind:dropup='true')
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
-    split-button(title='分裂下拉按钮',bs-style='primary')
+    split-button(title='分裂下拉按钮',bs-style='primary',v-on:click='clickButton')
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
+    h4 模态框
+    button(@click='toggleModal',bs-style='warning') 运行模态框
+    modal(v-bind:show.sync='showModal')
+      div(slot='modal-header')
+        span.close(type='button',aria-label='close',@click='closeModal')
+          span(aria-hidden="true")
+            &times;
+        h4.modal-title  模态框
+      div(slot='modal-body')
+        p One fine body
+      div(slot='modal-footer')
+        button(@click='closeModal') 关闭
+    h4 Tooltip
+    div(v-bind:style="tooltipStyle")
+      tooltip(placement='bottom',v-bind:show='true') tobottom
+    h4 tooltip 按钮
+    tooltip-button(bs-style='danger',trigger='click')  右边
 </template>
 <script>
 import VLabel from './src/label.vue';
@@ -38,10 +55,17 @@ import ButtonGroup from './src/buttonGroup.vue';
 import DropdownButton from './src/dropdownButton.vue';
 import MenuItem from './src/menuitem.vue';
 import SplitButton from './src/splitButton.vue';
+
+import Modal from './src/modal.vue';
+import Tooltip from './src/tooltip.vue';
+import TooltipButton from './src/tooltipButton.vue';
+let {header,body,footer} = Modal;
 export default{
     data(){
       return {
         title:"welcome vuebootstrap!",
+        showModal:false,
+        tooltipStyle:{position:'relative',height:'30px'},
         styleList:['default',"primary","success","info","warning","danger"],
         linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}]
       }
@@ -49,6 +73,15 @@ export default{
     methods:{
       clickButton(){
         alert('this is button');
+      },
+      toggleModal(){
+        this.showModal = !this.showModal;
+      },
+      beforeClose(){
+        alert('我要关闭了！');
+      },
+      closeModal(){
+        this.toggleModal();
       }
     },
     components:{
@@ -57,7 +90,10 @@ export default{
       Button,
       ButtonGroup,
       DropdownButton,
-      SplitButton
+      SplitButton,
+      Modal,
+      Tooltip,
+      TooltipButton
     }
 
 

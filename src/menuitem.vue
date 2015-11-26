@@ -10,23 +10,15 @@
 
 <template lang="jade">
   li
-    v-link(v-bind:href='href',v-bind:target='target')
+    v-link(v-bind:href='href',v-bind:target='target',v-bind:click-handle='clickHandle')
       slot
 </template>
 
 <script>
   import VLink from './link.vue';
-
+  import LinkMixin from './mixin/linkMixin.js';
   export default{
-    props:{
-      href:{
-        type:String
-      },
-      target:{
-        type:String,
-        default:null
-      }
-    },
+    mixins:[LinkMixin],
     components:{
       VLink
     }

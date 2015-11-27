@@ -47,6 +47,12 @@ div.container
       tooltip(placement='bottom',v-bind:show='true') tobottom
     h4 tooltip 按钮
     tooltip-button(bs-style='danger',trigger='click')  右边
+
+    h4 选项卡
+    tab
+      tab-item(name='tab1') 123
+      tab-item(name='tab2') 456
+      tab-item(name='tab3',disabled) 789
 </template>
 <script>
 import VLabel from './src/label.vue';
@@ -59,7 +65,10 @@ import SplitButton from './src/splitButton.vue';
 import Modal from './src/modal.vue';
 import Tooltip from './src/tooltip.vue';
 import TooltipButton from './src/tooltipButton.vue';
-let {header,body,footer} = Modal;
+
+import Tab from './src/tab.vue';
+import TabItem from './src/tabItem.vue';
+
 export default{
     data(){
       return {
@@ -93,7 +102,9 @@ export default{
       SplitButton,
       Modal,
       Tooltip,
-      TooltipButton
+      TooltipButton,
+      Tab,
+      TabItem
     }
 
 

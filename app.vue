@@ -53,6 +53,25 @@ div.container
       tab-item(name='tab1') 123
       tab-item(name='tab2') 456
       tab-item(name='tab3',disabled) 789
+    h4 分页组件
+    pagination(v-bind:active-page=6,v-bind:items=10,v-bind:on-select='selectPage')
+    h4 栅格
+    row
+      column(xs='12',sm='4',md='4') 栅格系统1
+      column(xs='12',sm='4',md='4') 栅格系统2
+      column(xs='12',sm='4',md='4') 栅格系统3
+    h4 面板
+    panel(bs-style='info')
+      div(slot='panel-header')
+        标题
+      div(slot='panel-body')
+        内容
+    h4 警告框
+    alert(bs-style='warning')
+      警告框
+    h4 表单
+    v-form
+      v-input(type='search',label='搜索')
 </template>
 <script>
 import VLabel from './src/label.vue';
@@ -69,6 +88,14 @@ import TooltipButton from './src/tooltipButton.vue';
 import Tab from './src/tab.vue';
 import TabItem from './src/tabItem.vue';
 
+import Pagination from './src/pagination.vue';
+import Row from './src/row.vue';
+import Column from './src/col.vue';
+import Panel from './src/panel.vue';
+import Alert from './src/alert.vue';
+
+import VForm from './src/form.vue';
+import VInput from './src/input.vue';
 export default{
     data(){
       return {
@@ -91,6 +118,9 @@ export default{
       },
       closeModal(){
         this.toggleModal();
+      },
+      selectPage(pager){
+        alert(pager.name);
       }
     },
     components:{
@@ -104,7 +134,14 @@ export default{
       Tooltip,
       TooltipButton,
       Tab,
-      TabItem
+      TabItem,
+      Pagination,
+      Row,
+      Column,
+      Panel,
+      Alert,
+      VForm,
+      VInput
     }
 
 

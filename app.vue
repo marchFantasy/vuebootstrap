@@ -17,7 +17,7 @@ div.container
   h2  {{title}}
   div.label-inline
     h4  Label标签
-    v-label(v-for='lab in styleList',v-bind:type="lab",track-by="$index",href='www.baidu.com') {{lab}}
+    label(is='label',v-for='lab in styleList',v-bind:type="lab",track-by="$index",href='www.baidu.com') {{lab}}
     h4 Button按钮
     button(v-for='btn in styleList',v-bind:bs-style="btn",type='button',@click='clickButton',track-by="$index") {{btn}}
     h4 按钮组
@@ -69,12 +69,19 @@ div.container
     h4 警告框
     alert(bs-style='warning')
       警告框
-    h4 表单
-    v-form
-      v-input(type='search',label='搜索')
+    h4 跑马灯
+    test
+    div
+      carousel(style='width:815px;')
+        carousel-item
+          img(src='./resources/carousel1.png')
+        carousel-item
+          img(src='./resources/carousel2.png')
+        carousel-item
+          img(src='./resources/carousel3.png')
 </template>
 <script>
-import VLabel from './src/label.vue';
+import Label from './src/label.vue';
 import Button from './src/button.vue';
 import ButtonGroup from './src/buttonGroup.vue';
 import DropdownButton from './src/dropdownButton.vue';
@@ -94,8 +101,10 @@ import Column from './src/col.vue';
 import Panel from './src/panel.vue';
 import Alert from './src/alert.vue';
 
-import VForm from './src/form.vue';
-import VInput from './src/input.vue';
+import Carousel from './src/carousel.vue';
+import CarouselItem from './src/carouselItem.vue';
+
+import Test from './src/test.vue';
 export default{
     data(){
       return {
@@ -124,7 +133,7 @@ export default{
       }
     },
     components:{
-      VLabel,
+      Label,
       MenuItem,
       Button,
       ButtonGroup,
@@ -140,8 +149,9 @@ export default{
       Column,
       Panel,
       Alert,
-      VForm,
-      VInput
+      Carousel,
+      CarouselItem,
+      Test
     }
 
 

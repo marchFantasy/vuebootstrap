@@ -17,7 +17,7 @@ div.container
   h2  {{title}}
   div.label-inline
     h4  Label标签
-    label(is='label',v-for='lab in styleList',v-bind:type="lab",track-by="$index",href='www.baidu.com') {{lab}}
+    label(is='label',v-for='lab in styleList',v-bind:bs-style="lab",track-by="$index",href='www.baidu.com') {{lab}}
     h4 Button按钮
     button(v-for='btn in styleList',v-bind:bs-style="btn",type='button',@click='clickButton',track-by="$index") {{btn}}
     h4 按钮组
@@ -49,10 +49,10 @@ div.container
     tooltip-button(bs-style='danger',trigger='click')  右边
 
     h4 选项卡
-    tab
-      tab-item(name='tab1') 123
-      tab-item(name='tab2') 456
-      tab-item(name='tab3',disabled) 789
+    tab(v-bind:on-select='clickTab')
+      tab-item(title='tab1') 123
+      tab-item(title='tab2') 456
+      tab-item(title='tab3',v-bind:disabled='true') 789
     h4 分页组件
     pagination(v-bind:active-page=6,v-bind:items=10,v-bind:on-select='selectPage')
     h4 栅格
@@ -130,6 +130,9 @@ export default{
       },
       selectPage(pager){
         alert(pager.name);
+      },
+      clickTab(tab){
+        alert(tab.title)
       }
     },
     components:{

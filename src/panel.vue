@@ -8,26 +8,18 @@ div(v-bind:class='classes')
 <script>
   /**
    * panel
-   * tag:Panel
+   * tag:panel
+   * @param bsStyle 风格
    * import Panel from './panel.vue';
    */
-
+import BsMixin from './mixin/bsMixin.js';
   export default{
-    props:{
-      bsStyle:{
-        type:String,
-        default:'default'
-      }
-    },
+    mixins:[BsMixin],
     data(){
       return{
-        classes:{
-          'panel':true,
-        }
+        tag:'panel',
+        classes:{}
       }
-    },
-    created(){
-      this.classes['panel-'+this.bsStyle] = true;
     }
   }
 </script>

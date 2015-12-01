@@ -1,32 +1,50 @@
+<template lang="jade">
+div.tab-pane.fade(v-bind:class='classes')
+  slot
+</template>
+<script>
 /**
  * tabitem选项卡
  * tag:TabItem
+ * @param disabled 不可选
+ * @param title 标题
  * @description
  * 这里data属性好像没有什么用，主要是父组件操作
  */
 
-<template lang="jade">
-div(v-bind:class='classes')
-  slot
-</template>
-<script>
+
 export default{
   props:{
-    isIn:{
+    disabled:{
       type:Boolean,
       default:false
+    },
+    title:{
+      type:String,
+      validator:(value)=>{
+        return value.trim() != ''
+      }
     }
   },
   data(){
     return{
-      classes:{'tab-pane':true,'fade':true,'in':false}
+      classes:[]
     }
   },
+
   created(){
-    if(this.isIn){
-      this.classes['in'] = true;
-    }else{
-      this.classes['in'] = false;
+    this.$parent.addItem(this);
+  },
+  methods:{
+    setActive(){
+      this.classes.push('active');
+    },
+    animateIn(){
+      this.classes.push('in');
+    },
+    animateOut(){
+      this.classes.splice(0,2);
+      this.classes = [];
     }
   }
 }

@@ -26,7 +26,6 @@ div.modal.fade(v-bind:class='isIn')
 </template>
 
 <script>
-  import Button from './button.vue';
   import Overlay from './overlay.vue';
   const Modal = {
     props:{
@@ -67,7 +66,6 @@ div.modal.fade(v-bind:class='isIn')
       }
     },
     components:{
-      Button,
       Overlay
     }
   }

@@ -1,17 +1,5 @@
-/**
- * pagination
- * @tag:Pagination
- * @param size
- * @param activePage 当前页码
- * @param items  页数
- * @param maxButtons 显示最大页码数量
- * @param ellipsis items > maxButtons 显示省略号
- * @param onSelect 选中事件
- * @description
- *
- */
 <template lang='jade'>
-ul.pagination
+ul(v-bind:class='classes')
   nav-item(
     v-for='instance in pages',
     v-bind:class='{active:instance.val === activePage,disabled:instance.disabled}',
@@ -21,12 +9,28 @@ ul.pagination
 <script>
   import NavItem from './navItem.vue';
   /**
-   * 页码类
-   * @param val 值
-   * @param active 当前页
-   * @param disabled 可选
+   * pagination
+   * @tag:pagination
+   * @param bsSize 尺寸
+   * @param activePage 当前页码
+   * @param items  页数
+   * @param maxButtons 显示页码数量
+   * @param ellipsis items > maxButtons 显示省略号
+   * @param onSelect 选中事件
+   * @description
+   *
    */
+
   class Pager{
+    /**
+     * 页码类
+     * [constructor description]
+     * @param  {[type]} val            [值]
+     * @param  {[type]} name           [简称]
+     * @param  {[type]} active=false   [当前页]
+     * @param  {[type]} disabled=false [是否可选]
+     * @return {[type]}                [类]
+     */
     constructor(val,name,active=false,disabled=false){
       this.val = val;
       this.name = name || val;
@@ -34,11 +38,10 @@ ul.pagination
       this.disabled = disabled;
     }
   }
+  import BsMixin from './mixin/bsMixin.js';
   export default{
+    mixins:[BsMixin],
     props:{
-      size:{
-        type:String
-      },
       activePage:{
         type:Number,
         default:1,
@@ -67,6 +70,8 @@ ul.pagination
     },
     data(){
       return {
+        tag:'pagination',
+        classes:{},
         pages:[]
       }
     },

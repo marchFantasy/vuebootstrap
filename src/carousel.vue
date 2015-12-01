@@ -1,13 +1,13 @@
 <template lang='jade'>
 div.carousel.slide#carousel
-  ol.carousel-indicators
+  ol.carousel-indicators(v-if='indicators')
     li(v-for='i in count',v-bind:class='{"active":$index===activeIndex}')
-  div.carousel-inner
+  div.carousel-inner(@mouseover='pause',@mouseout='play')
     slot
-  a.left.carousel-control
+  a.left.carousel-control(v-if='controls',@click='prev')
     span.glyphicon.glyphicon-chevron-left
     span.sr-only Previous
-  a.right.carousel-control
+  a.right.carousel-control(v-if='controls',@click='next')
     span.glyphicon.glyphicon-chevron-right
     span.sr-only Next
 </template>
@@ -16,7 +16,10 @@ div.carousel.slide#carousel
  * carousel：跑马灯
  * tag:Carousel
  * @param interval 间隔时间
- * @param
+ * @param controls 控制切换上一个/下一个
+ * @param indicators 显示锚点
+ * @param pauseOnHover hover时暂停
+ * @param slide 自动轮播
  * @description
  *
  */
@@ -27,6 +30,22 @@ export default{
     interval:{
       type:Number,
       default:3000
+    },
+    controls:{
+      type:Boolean,
+      default:true
+    },
+    indicators:{
+      type:Boolean,
+      default:true
+    },
+    pauseOnHover:{
+      type:Boolean,
+      default:true
+    },
+    slide:{
+      type:Boolean,
+      default:true
     }
   },
   data(){
@@ -57,7 +76,7 @@ export default{
   },
   methods:{
     waitForNext(){
-      if(!this.isPause && this.count > 0){
+      if(!this.isPause && this.slide && this.count > 0){
         this.timeout = setTimeout(this.next,this.interval);
       }
     },
@@ -83,8 +102,9 @@ export default{
       this.handleSelect(index,'next');
     },
     pause(){
+      if(this.isPause)return;
       this.isPause = true;
-      clearTimeout(this.timeout);
+      if(this.timeout)clearTimeout(this.timeout);
     },
     play(){
       this.isPause =false;

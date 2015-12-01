@@ -1,46 +1,47 @@
+<template lang="jade">
+button(v-bind:class='classes',v-bind:type='type',@click='clickHandle')
+  slot
+</template>
+
+<script>
 /**
  * button
- * tag:Button
+ * tag:btn
  * @param type  button,submit
  * @param bsStyle primary,success,info....
- * @param size lg,xs,sm
+ * @param bsSize lg,xs,sm
  * @description
  * 按钮标签
  * 之所以命名为bsStyle，是因为style已被系统变量占用
  * 可以直接命名为Button,默认情况请使用：
  * import Button from 'button.vue';
  */
-<template lang="jade">
-button(class='{{classes}}',type='{{type}}')
-  slot
-</template>
-
-<script>
-
-import ButtonMixin from './mixin/ButtonMixin.js';
+import BsMixin from './mixin/bsMixin.js';
 export default{
-  mixins:[ButtonMixin],
+  mixins:[BsMixin],
   props:{
     'type':{
       type:String,
       default:"button"
     },
-  },
-  computed:{
-    bSize(){
-      return this.size || null;
-    }
-  },
-  created(){
-    this.classes += " btn-"+this.bsStyle;
-    if(this.bSize){
-      this.classes += " btn-"+this.size;
+    'onClick':{
+      type:Function,
+      default:null
     }
   },
   data(){
     return {
-      classes:"btn"
+      tag:'btn',
+      classes:{}
+    }
+  },
+  methods:{
+    clickHandle(e){
+      if(this.onClick){
+        this.onClick(e);
+      }
     }
   }
+
 }
 </script>

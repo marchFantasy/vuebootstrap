@@ -5,25 +5,20 @@ div(v-bind:class='classes')
 <script>
 /**
  * alert
- * tag:Alert
+ * tag:alert
  * 警告框
+ * @param bsStyle 
  * import Alert from './alert.vue';
  */
+
+import BsMixin from './mixin/bsMixin.js';
 export default{
-  props:{
-    bsStyle:{
-      type:String
-    }
-  },
+  mixins:[BsMixin],
   data(){
     return{
-      classes:{
-        alert:true
-      }
+      tag:'alert',
+      classes:{}
     }
-  },
-  created(){
-    this.classes['alert-'+this.bsStyle] = true;
   }
 }
 

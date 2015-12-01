@@ -1,30 +1,24 @@
-/**
- * nav
- * tag:VNav
- * @description
- * 调用的时候切勿之间使用nav标签，会自动调用系统标签，统一前缀vnav
- */
-
 <template lang='jade'>
 ul.nav(v-bind:class='classes')
   slot
 </template>
 <script>
-
+/**
+ * nav
+ * tag:nav
+ * @description
+ * 调用的时候切勿直接使用nav标签，会自动调用系统标签，需添加is属性
+ * import Nav from './nac.vue';
+ * nav(is='nav')
+ */
+import BsMixin from './mixin/bsMixin.js';
 export default{
-  props:{
-    bsStyle:{
-      type:String,
-      default:'tabs'
-    }
-  },
+  mixins:[BsMixin],
   data(){
     return {
-      classes:{nav:true}
+      tag:'nav',
+      classes:{}
     }
-  },
-  created(){
-    this.classes['nav-'+this.bsStyle] = true;
   }
 }
 </script>

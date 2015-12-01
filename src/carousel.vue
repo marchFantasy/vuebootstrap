@@ -155,8 +155,10 @@ export default{
        self.activeIndex = index;
 
     }
+  },
+  destroyed(){
+    clearTimeout(this.timeout);
   }
-
 }
 
 </script>

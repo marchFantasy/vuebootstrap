@@ -79,6 +79,10 @@ div.container
           img(src='./resources/carousel2.png')
         carousel-item
           img(src='./resources/carousel3.png')
+    h4 表单控件
+    form(is='form',bs-style='horizontal',v-bind:layout='{sm:"3,9",md:"2,8"}')
+      form-input(type=text,label='输入框1',placeholder='输入框12',:model.sync='value')
+    {{value}}
 </template>
 <script>
 import Label from './src/label.vue';
@@ -104,7 +108,12 @@ import Alert from './src/alert.vue';
 import Carousel from './src/carousel.vue';
 import CarouselItem from './src/carouselItem.vue';
 
+import Form from './src/form.vue';
+import FormInput from './src/formInput.vue';
+
 import Test from './src/test.vue';
+
+
 export default{
     data(){
       return {
@@ -112,7 +121,8 @@ export default{
         showModal:false,
         tooltipStyle:{position:'relative',height:'30px'},
         styleList:['default',"primary","success","info","warning","danger"],
-        linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}]
+        linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}],
+        value:"form1"
       }
     },
     methods:{
@@ -154,6 +164,8 @@ export default{
       Alert,
       Carousel,
       CarouselItem,
+      Form,
+      FormInput,
       Test
     }
 

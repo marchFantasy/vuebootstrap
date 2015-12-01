@@ -11,16 +11,26 @@ module.exports = {
   },
   created:function(){
     var character = '-';
-    if(this.tag){
+    var self = this;
+    if(self.tag){
       //默认添加tag class
-      this.classes[this.tag] = true;
+      self.classes[self.tag] = true;
       //添加style，例如：btn-primary
-      if(this.bsStyle){
-        this.classes[this.tag+character+this.bsStyle] = true;
+      if(self.bsStyle){
+        var list = self.bsStyle.split(',');
+        if(list.length === 0){
+          self.classes[self.tag+character+list[0]] = true;
+        }else{
+          list.forEach(function(style){
+            self.classes[self.tag+character+style] = true;
+          })
+        }
+
+
       }
       //大小，例如：btn-sm
-      if(this.bsSize){
-        this.classes[this.tag+character+this.bsSize] = true;
+      if(self.bsSize){
+        self.classes[self.tag+character+self.bsSize] = true;
       }
 
     }

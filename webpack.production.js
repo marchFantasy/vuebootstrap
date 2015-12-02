@@ -14,6 +14,11 @@ module.exports = {
         loader: 'vue'
       },
       {
+      	test: /\.js$/,
+        exclude: /node_modules|vue\/src|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+      	loader: 'babel'
+      },
+      {
         // edit this for additional asset file types
         test: /\.(png|jpg|gif)$/,
         loader: 'file?name=[name].[ext]?[hash]'
@@ -25,11 +30,8 @@ module.exports = {
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
-  }
-}
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports.plugins = [
+  },
+  plugins:[
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
@@ -42,6 +44,4 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.optimize.OccurenceOrderPlugin()
   ]
-} else {
-  module.exports.devtool = '#source-map'
 }

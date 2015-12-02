@@ -76,7 +76,6 @@ div.container
     alert(bs-style='warning')
       警告框
     h4 跑马灯
-    test
     div
       carousel(style='width:815px;')
         carousel-item
@@ -87,7 +86,7 @@ div.container
           img(src='./resources/carousel3.png')
     h4 表单控件
     form(is='form',bs-style='horizontal',v-bind:layout='{sm:"3,9",md:"2,8"}')
-      form-input(type=text,label='输入框1',placeholder='输入框12',:model.sync='value')
+      form-input(type=text,label='输入框1',placeholder='输入框12',v-bind:model.sync='value')
     {{value}}
 </template>
 <script>
@@ -118,9 +117,6 @@ import CarouselItem from './src/carouselItem.vue';
 
 import Form from './src/form.vue';
 import FormInput from './src/formInput.vue';
-
-import Test from './src/test.vue';
-
 
 export default{
     data(){
@@ -176,8 +172,7 @@ export default{
       Form,
       FormInput,
       Popover,
-      PopoverTrigger,
-      Test
+      PopoverTrigger
     }
 
 

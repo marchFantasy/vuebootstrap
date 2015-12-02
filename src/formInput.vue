@@ -1,7 +1,8 @@
-<template lang='jade'>
+<template lang="jade">
 div.form-group
-  label(v-el:'label',v-bind:class='lblClass') {{label}}
-  div(v-bind:class='iptClass',v-if='horizontal')
+  label(v-bind:class='lblClass')
+    {{label}}
+  div(v-if='horizontal',v-bind:class='iptClass')
     input.form-control(
       v-el:input,
       v-bind:type='type',
@@ -9,18 +10,17 @@ div.form-group
       v-model='model'
     )
   input.form-control(
-      v-if = '!horizontal',
-      v-el:input,
-      v-bind:type='type',
-      v-bind:placeholder='placeholder',
-      v-model='model'
-    )
+    v-if = '!horizontal',
+    v-el:input,
+    v-bind:type='type',
+    v-bind:placeholder='placeholder',
+    v-model='model'
+  )
 </template>
 <script>
 /**
- * formInput
+ *
  */
-
 export default{
   props:{
     type:{

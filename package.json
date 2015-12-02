@@ -2,9 +2,10 @@
   "name": "vuebootstrap",
   "version": "0.0.1",
   "description": "vue-loader,vue,jade,stylus,webpack",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "webpack-dev-server --inline --hot --quiet"
+    "dev": "webpack-dev-server --inline --hot --quiet",
+    "production":"webpack --config webpack.production.js"
   },
   "repository": {
     "type": "git",

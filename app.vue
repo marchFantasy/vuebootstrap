@@ -46,8 +46,14 @@ div.container
     div(v-bind:style="tooltipStyle")
       tooltip(placement='bottom',v-bind:show='true') tobottom
     h4 tooltip 按钮
-    tooltip-button(bs-style='danger',trigger='click')  右边
-
+    tooltip-trigger(trigger='click',placement='right',content="12312312321312")
+      button(bs-style='danger') 提示框
+    h4 popver弹出框
+    div(v-bind:style='popoverStyle')
+      popover(title='标题',placement='top',v-bind:show='true')
+        弹出框内容呢弹出框内容呢弹出框内容呢
+    popover-trigger(trigger='click',placement='right',title='title',content="撒大家快乐啊圣诞节快乐的撒娇哭\n手机打开")
+      button(bs-style='default') popover弹出来
     h4 选项卡
     tab(v-bind:on-select='clickTab')
       tab-item(title='tab1') 123
@@ -94,7 +100,9 @@ import SplitButton from './src/splitButton.vue';
 
 import Modal from './src/modal.vue';
 import Tooltip from './src/tooltip.vue';
-import TooltipButton from './src/tooltipButton.vue';
+import TooltipTrigger from './src/tooltipTrigger.vue';
+import Popover from './src/popover.vue';
+import PopoverTrigger from './src/popoverTrigger.vue';
 
 import Tab from './src/tab.vue';
 import TabItem from './src/tabItem.vue';
@@ -120,6 +128,7 @@ export default{
         title:"welcome vuebootstrap!",
         showModal:false,
         tooltipStyle:{position:'relative',height:'30px'},
+        popoverStyle:{position:'relative',height:'100px'},
         styleList:['default',"primary","success","info","warning","danger"],
         linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}],
         value:"form1"
@@ -154,7 +163,7 @@ export default{
       SplitButton,
       Modal,
       Tooltip,
-      TooltipButton,
+      TooltipTrigger,
       Tab,
       TabItem,
       Pagination,
@@ -166,6 +175,8 @@ export default{
       CarouselItem,
       Form,
       FormInput,
+      Popover,
+      PopoverTrigger,
       Test
     }
 

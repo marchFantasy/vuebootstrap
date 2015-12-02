@@ -517,8 +517,8 @@ aside#sidebar p.repo-owner a {
 }
 
 a.button {
-  width: 134px;
-  height: 58px;
+  width: 202px;
+  height: 80px;
   padding-top: 22px;
   padding-left: 68px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
@@ -538,7 +538,7 @@ header a.button {
 }
 aside a.button {
   display: block;
-  width: 138px;
+  width: 202px;
   padding-left: 64px;
   margin-bottom: 20px;
   font-size: 21px;
@@ -562,13 +562,13 @@ pre {
   padding: 20px;
   overflow: auto;
   text-shadow: none;
-  background: #fff;
+  background: #000;
   border: solid 1px #f2f2f2;
 }
 pre code {
   padding: 0;
   color: #2879d0;
-  background-color: #fff;
+  background-color: #000;
   border: none;
 }
 
@@ -878,4 +878,3 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
-

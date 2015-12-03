@@ -660,7 +660,15 @@ form {
   content: "///";
   color: #9ddcff;
 }
+#main-content .panel h3{
+  margin:0;
 
+}
+#main-content .panel h3:before {
+  padding-right: 0;
+  margin-left:0;
+  content:""
+}
 #main-content h4 {
   margin-bottom: 8px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;

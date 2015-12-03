@@ -1,5 +1,5 @@
 <template lang="jade">
-button(v-bind:class='classes',v-bind:type='type',@click='clickHandle')
+button(v-bind:class='classes',v-bind:type='type')
   slot
 </template>
 
@@ -33,13 +33,6 @@ export default{
     return {
       tag:'btn',
       classes:{}
-    }
-  },
-  methods:{
-    clickHandle(e){
-      if(this.onClick){
-        this.onClick(e);
-      }
     }
   }
 

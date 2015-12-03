@@ -16,7 +16,7 @@ div(role='group',v-bind:class='classes')
 <script>
 export default{
   props:{
-    'size':{
+    'bsSize':{
       type:String
     },
     'align':{
@@ -25,7 +25,7 @@ export default{
   },
   computed:{
     bSize:function(){
-      return this.size || null
+      return this.bsSize || null
     },
     bAlign:function(){
       return this.align || null

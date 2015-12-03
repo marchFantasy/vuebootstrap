@@ -5,7 +5,7 @@ import Button from './src/button.vue';
 import ButtonGroup from './src/buttonGroup.vue';
 import Carousel from './src/carousel.vue';
 import CarouselItem from './src/carouselItem.vue';
-import Col from './src/col.vue';
+import Column from './src/col.vue';
 import DropdownButton from './src/dropdownButton.vue';
 import Form from './src/form.vue';
 import FormInput from './src/formInput.vue';
@@ -31,7 +31,7 @@ export default{
   ButtonGroup,
   Carousel,
   CarouselItem,
-  Col,
+  Column,
   DropdownButton,
   Form,
   FormInput,

@@ -79,44 +79,44 @@ div.container
     div
       carousel(style='width:815px;')
         carousel-item
-          img(src='./resources/carousel1.png')
+          img(src='../resources/carousel1.png')
         carousel-item
-          img(src='./resources/carousel2.png')
+          img(src='../resources/carousel2.png')
         carousel-item
-          img(src='./resources/carousel3.png')
+          img(src='../resources/carousel3.png')
     h4 表单控件
     form(is='form',bs-style='horizontal',v-bind:layout='{sm:"3,9",md:"2,8"}')
       form-input(type=text,label='输入框1',placeholder='输入框12',v-bind:model.sync='value')
     {{value}}
 </template>
 <script>
-import Label from './src/label.vue';
-import Button from './src/button.vue';
-import ButtonGroup from './src/buttonGroup.vue';
-import DropdownButton from './src/dropdownButton.vue';
-import MenuItem from './src/menuitem.vue';
-import SplitButton from './src/splitButton.vue';
+import Label from '../src/label.vue';
+import Button from '../src/button.vue';
+import ButtonGroup from '../src/buttonGroup.vue';
+import DropdownButton from '../src/dropdownButton.vue';
+import MenuItem from '../src/menuitem.vue';
+import SplitButton from '../src/splitButton.vue';
 
-import Modal from './src/modal.vue';
-import Tooltip from './src/tooltip.vue';
-import TooltipTrigger from './src/tooltipTrigger.vue';
-import Popover from './src/popover.vue';
-import PopoverTrigger from './src/popoverTrigger.vue';
+import Modal from '../src/modal.vue';
+import Tooltip from '../src/tooltip.vue';
+import TooltipTrigger from '../src/tooltipTrigger.vue';
+import Popover from '../src/popover.vue';
+import PopoverTrigger from '../src/popoverTrigger.vue';
 
-import Tab from './src/tab.vue';
-import TabItem from './src/tabItem.vue';
+import Tab from '../src/tab.vue';
+import TabItem from '../src/tabItem.vue';
 
-import Pagination from './src/pagination.vue';
-import Row from './src/row.vue';
-import Column from './src/col.vue';
-import Panel from './src/panel.vue';
-import Alert from './src/alert.vue';
+import Pagination from '../src/pagination.vue';
+import Row from '../src/row.vue';
+import Column from '../src/col.vue';
+import Panel from '../src/panel.vue';
+import Alert from '../src/alert.vue';
 
-import Carousel from './src/carousel.vue';
-import CarouselItem from './src/carouselItem.vue';
+import Carousel from '../src/carousel.vue';
+import CarouselItem from '../src/carouselItem.vue';
 
-import Form from './src/form.vue';
-import FormInput from './src/formInput.vue';
+import Form from '../src/form.vue';
+import FormInput from '../src/formInput.vue';
 
 export default{
     data(){

@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './index.js',
+  entry: './demo/index.js',
   output: {
     path: './dist',
     publicPath: 'dist/',

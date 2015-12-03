@@ -1,6 +1,6 @@
 {
   "name": "vuebootstrap",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "vue-loader,vue,jade,stylus,webpack",
   "main": "./app.vue",
   "scripts": {

@@ -3,8 +3,8 @@ var webpack = require('webpack');
 module.exports = {
   entry: './main.js',
   output: {
-    path: './dist',
-    publicPath: 'dist/',
+    path: './production',
+    publicPath: 'production/',
     filename: 'dist.js'
   },
   module: {

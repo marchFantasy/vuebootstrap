@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'vuebootsrap':'./main.js'
+    'vuebootstrap':'./main.js'
   },
   output: {
     path: './production',

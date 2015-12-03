@@ -2,7 +2,7 @@
   "name": "vuebootstrap",
   "version": "0.0.3",
   "description": "vue-loader,vue,jade,stylus,webpack",
-  "main": "./production/dist.js",
+  "main": "./production/vuebootstrap.min.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --quiet --content-base ./demo",
     "production":"webpack --config webpack.production.js"

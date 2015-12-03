@@ -1,11 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './main.js',
+  entry: {
+    'vuebootsrap':'./main.js'
+  },
   output: {
     path: './production',
     publicPath: 'production/',
-    filename: 'dist.js'
+    filename: '[name].min.js',
+    library: 'Vuebootsrap',
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [

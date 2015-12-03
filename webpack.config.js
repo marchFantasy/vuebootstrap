@@ -14,6 +14,11 @@ module.exports = {
         loader: 'vue'
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules|vue\/src|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+        loader: 'babel'
+      },
+      {
         // edit this for additional asset file types
         test: /\.(png|jpg|gif)$/,
         loader: 'file?name=[name].[ext]?[hash]'

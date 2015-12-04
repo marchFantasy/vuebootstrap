@@ -9,5 +9,15 @@ npm install --save vuebootstrap
 ### CommonJS
 ```javascript
 var Vuebootstrap = require('vuebootstrap');
-var button = Vuebootstrap.button;
+var Button = Vuebootstrap.Button;
+```
+### ES6
+```javascript
+import {Button,Label} from 'vuebootstrap';
+export default{
+  components:{
+    Button,
+    Label
+  }
+}
 ```

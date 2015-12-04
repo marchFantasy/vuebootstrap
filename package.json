@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justmeMarch/vuebootstrap.git"
+    "url": "git+https://github.com/marchFantasy/vuebootstrap.git"
   },
   "keywords": [
     "vue-loader",

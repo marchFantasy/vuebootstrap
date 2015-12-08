@@ -44,8 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue = __webpack_require__(29);
-	var vuebootstrap = __webpack_require__(31);
+	var Vue = __webpack_require__(33);
+	var vuebootstrap = __webpack_require__(35);
 
 	new Vue({
 	  el:"#main-content",
@@ -84,7 +84,11 @@
 /* 26 */,
 /* 27 */,
 /* 28 */,
-/* 29 */
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/*!
@@ -9389,10 +9393,10 @@
 	}
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(34)))
 
 /***/ },
-/* 30 */
+/* 34 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -9489,14 +9493,14 @@
 
 
 /***/ },
-/* 31 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(32)
-	module.exports = __webpack_require__(36)
+	__webpack_require__(36)
+	module.exports = __webpack_require__(40)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(134)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(150)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -9514,16 +9518,16 @@
 	}
 
 /***/ },
-/* 32 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(33);
+	var content = __webpack_require__(37);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(39)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -9540,10 +9544,10 @@
 	}
 
 /***/ },
-/* 33 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(34)();
+	exports = module.exports = __webpack_require__(38)();
 	// imports
 
 
@@ -9554,7 +9558,7 @@
 
 
 /***/ },
-/* 34 */
+/* 38 */
 /***/ function(module, exports) {
 
 	/*
@@ -9610,7 +9614,7 @@
 
 
 /***/ },
-/* 35 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -9864,7 +9868,7 @@
 
 
 /***/ },
-/* 36 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9873,7 +9877,7 @@
 	  value: true
 	});
 
-	var _vuebootstrap = __webpack_require__(37);
+	var _vuebootstrap = __webpack_require__(41);
 
 	var _vuebootstrap2 = _interopRequireDefault(_vuebootstrap);
 
@@ -9885,7 +9889,7 @@
 	//     margin:0 1px
 	// </style>
 	// <template lang='jade'>
-	// h3 标签－Label
+	// h3#vbs-label 标签－Label
 	// panel
 	//   div(slot='panel-header')
 	//      说明,需要添加is属性：is＝'label'
@@ -9914,7 +9918,7 @@
 	//             <!-- more -->
 	//           </template>
 
-	// h3 按钮－Button
+	// h3#vbs-button 按钮－Button
 	// panel#button-example
 	//   div(slot='panel-header')
 	//      说明
@@ -10080,7 +10084,7 @@
 	//               </menu-item>
 	//             </split-button>
 	//           </template>
-	// h3 警告框-Alert
+	// h3#vbs-alert 警告框-Alert
 	// panel
 	//   div(slot='panel-header')
 	//      说明
@@ -10107,7 +10111,7 @@
 	//             </alert>
 	//           </template>
 
-	// h3 模态框－Modal
+	// h3#vbs-modal 模态框－Modal
 	// panel
 	//   div(slot='panel-header')
 	//      说明
@@ -10168,7 +10172,7 @@
 	//               }
 	//             }
 	//           </script>
-	// h3 Tooltip
+	// h3#vbs-tooltip Tooltip
 	// panel
 	//   div(slot='panel-header')
 	//      说明
@@ -10280,7 +10284,7 @@
 	//               <button bs-style='info'>提示框按钮</button>
 	//             </popover-trigger>
 	//           </template>
-	// h3 选项卡－Tab
+	// h3#vbs-tab 选项卡－Tab
 	// panel
 	//   div(slot='panel-header')
 	//      说明，tab，tab-item
@@ -10326,7 +10330,7 @@
 	//               }
 	//             }
 	//           </script>
-	// h3 分页组件－Pagination
+	// h3#vbs-pagination 分页组件－Pagination
 	// panel
 	//   div(slot='panel-header')
 	//      说明,pager
@@ -10365,7 +10369,7 @@
 	//               }
 	//             }
 	//           </script>
-	// h3 栅格－Row,Column
+	// h3#vbs-row 栅格－Row,Column
 	// panel
 	//   div(slot='panel-header')
 	//      说明
@@ -10405,7 +10409,7 @@
 	//               </column>
 	//             </row>
 	//           </template>
-	// h3 面板－panel
+	// h3#vbs-panel 面板－panel
 	// panel
 	//   div(slot='panel-header')
 	//      标题
@@ -10432,7 +10436,7 @@
 	//             </div>
 	//           </panel>
 	//         </template>
-	// h3 跑马灯－Carousel
+	// h3#vbs-carousel 跑马灯－Carousel
 	// panel
 	//   div(slot='panel-header')
 	//      说明，carousel，carousel-item
@@ -10482,7 +10486,7 @@
 	//           </carousel>
 	//         </template>
 
-	// h3 表单－Form
+	// h3#vbs-form 表单－Form
 	// panel
 	//   div(slot='panel-header')
 	//      说明，form,form-input
@@ -10541,7 +10545,181 @@
 	//             }
 	//           }
 	//         </script>
-
+	// h3#vbs-breadcrumb 面包屑－Breadcrumb
+	// panel
+	//   div(slot='panel-header')
+	//      说明，breadcrumb,breadcrumb-item
+	//   div(slot='panel-body')
+	//     p
+	//       breadcrumb
+	//         breadcrumb-item(href='#').
+	//           home
+	//         breadcrumb-item(href='#').
+	//           library
+	//         breadcrumb-item(v-bind:active='true').
+	//           point
+	//     p
+	//       strong.pl-ent breadcrumb-item
+	//     p
+	//       strong.pl-k 'href'
+	//       ：链接地址
+	//     p
+	//       strong.pl-k 'active'
+	//       ：bool值，当前所在页
+	//     p
+	//       textarea(name='example-code-breadcrumb').
+	//         <template>
+	//           <breadcrumb>
+	//             <breadcrumb-item href='#'>
+	//               home
+	//             </breadcrumb-item>
+	//             <breadcrumb-item href='#'>
+	//               library
+	//             </breadcrumb-item>
+	//             <breadcrumb-item v-bind:active='true'>
+	//               point
+	//             </breadcrumb-item>
+	//           </breadcrumb>
+	//         </template>
+	// h3#vbs-thumbnail 缩略图－Thumbnail
+	// panel
+	//   div(slot='panel-header')
+	//      说明，thumbnail内部可包含h3标题，p标签描述信息和按钮组
+	//   div(slot='panel-body')
+	//     row
+	//       column(md='4',sm='12')
+	//         thumbnail(
+	//                 href='#'
+	//                 src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+',
+	//                 alt='示例图')
+	//                 h3 标题
+	//                 p 描述信息在这里
+	//                 p
+	//                   button(bs-style='primary') 按钮
+	//                   button 按钮
+	//       column(md='4',sm='12')
+	//         thumbnail(
+	//                 src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+',
+	//                 alt='示例图')
+	//                 h3 标题
+	//                 p 描述信息在这里
+	//                 p
+	//                   button(bs-style='primary') 按钮
+	//                   button 按钮
+	//       column(md='4',sm='12')
+	//         thumbnail(
+	//                 src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+',
+	//                 alt='示例图')
+	//                 h3 标题
+	//                 p 描述信息在这里
+	//                 p
+	//                   button(bs-style='primary') 按钮
+	//                   button 按钮
+	//     p
+	//       strong.pl-k 'href'
+	//       ：链接地址
+	//     p
+	//       strong.pl-k 'target'
+	//       ：目标项
+	//     p
+	//       strong.pl-k 'src'
+	//       ：图片地址
+	//     p
+	//       strong.pl-k 'alt'
+	//       ：图片标注信息
+	//     p
+	//       textarea(name='example-code-thumbnail').
+	//         <template>
+	//           <row>
+	//             <column md='4' sm='12'>
+	//               <thumbnail
+	//               src='http://',
+	//               alt='image',
+	//               href='url',
+	//               target='_blank'
+	//               >
+	//               <h3>title</h3>
+	//               <p>content</p>
+	//               <p>
+	//                 <button bs-style='pimary'>按钮</button>
+	//                 <button>按钮</button>
+	//               </p>
+	//               </thumbnail>
+	//             </column>
+	//             <column md='4' sm='12'>
+	//               <thumbnail
+	//               src='http://',
+	//               alt='image',
+	//               href='url',
+	//               target='_blank'
+	//               >
+	//               <h3>title</h3>
+	//               <p>content</p>
+	//               <p>
+	//                 <button bs-style='pimary'>按钮</button>
+	//                 <button>按钮</button>
+	//               </p>
+	//               </thumbnail>
+	//             </column>
+	//             <column md='4' sm='12'>
+	//               <thumbnail
+	//               src='http://',
+	//               alt='image',
+	//               href='url',
+	//               target='_blank'
+	//               >
+	//               <h3>title</h3>
+	//               <p>content</p>
+	//               <p>
+	//                 <button bs-style='pimary'>按钮</button>
+	//                 <button>按钮</button>
+	//               </p>
+	//               </thumbnail>
+	//             </column>
+	//           </row>
+	//         </template>
+	// h3#vbs-progressbar 进度条－Progressbar
+	// panel
+	//   div(slot='panel-header')
+	//      说明
+	//   div(slot='panel-body')
+	//     div
+	//       progressbar(
+	//       v-bind:progress='progress',
+	//       bs-style='danger',
+	//       v-bind:striped='true',
+	//       v-bind:animation='true')
+	//         {{progress}}
+	//       button(@click='addProgress') 进度变化点击我
+	//     p
+	//       strong.pl-k 'progress'
+	//       ：Number类型，当前进度数
+	//     p
+	//       strong.pl-k 'min'
+	//       ：Number类型，最小值，默认：0
+	//     p
+	//       strong.pl-k 'max'
+	//       ：Number类型，最大值，默认：100
+	//     p
+	//       strong.pl-k 'bs-style'
+	//       ：样式类型
+	//     p
+	//       strong.pl-k 'striped'
+	//       ：bool类型，条纹状
+	//     p
+	//       strong.pl-k 'animation'
+	//       ：bool类型，条纹动画效果
+	//     p
+	//       textarea(name='example-code-progressbar').
+	//         <template>
+	//           <progressbar
+	//           v-bind:progress='progress'
+	//           bs-style='danger'
+	//           v-bind:striped='true'
+	//           v-bind:animation='true'>
+	//             {&nbsp;{progress}&nbsp;}
+	//           </progressbar>
+	//         </template>
 	// </template>
 	// <script>
 
@@ -10566,11 +10744,16 @@
 	var FormInput = _vuebootstrap2.default.FormInput;
 	var Popover = _vuebootstrap2.default.Popover;
 	var PopoverTrigger = _vuebootstrap2.default.PopoverTrigger;
+	var Breadcrumb = _vuebootstrap2.default.Breadcrumb;
+	var BreadcrumbItem = _vuebootstrap2.default.BreadcrumbItem;
+	var Thumbnail = _vuebootstrap2.default.Thumbnail;
+	var Progressbar = _vuebootstrap2.default.Progressbar;
 	exports.default = {
 	  data: function data() {
 	    return {
 	      value: "text",
 	      lizis: 3,
+	      progress: 10,
 	      tooltipStyle: { position: 'relative', height: '30px' },
 	      showModal: false,
 	      popoverStyle: { position: 'relative', height: '100px' },
@@ -10596,9 +10779,16 @@
 	      var sourceCodeEl = $(e.target).parent().next().children(".CodeMirror");
 
 	      sourceCodeEl.is(":hidden") ? sourceCodeEl.show() : sourceCodeEl.hide();
+	    },
+	    addProgress: function addProgress() {
+	      this.progress += 2;
+	      if (this.progress > 100) {
+	        this.progress = 100;
+	      }
 	    }
 	  },
 	  ready: function ready() {
+	    //示例代码高亮
 	    var mixedMode = {
 	      name: "htmlmixed",
 	      scriptTypes: [{ matches: /\/x-handlebars-template|\/x-mustache/i,
@@ -10614,6 +10804,17 @@
 	        lineNumbers: true
 	      });
 	    });
+	    //导航
+	    if ($.isFunction($.fn.affix) && $.isFunction($.fn.scrollspy)) {
+	      $('#navbar').affix({
+	        offset: {
+	          top: 550,
+	          bottom: function bottom() {
+	            return this.bottom = $('.footer').outerHeight(true);
+	          }
+	        }
+	      });
+	    }
 	  },
 
 	  components: {
@@ -10638,16 +10839,20 @@
 	    Form: Form,
 	    FormInput: FormInput,
 	    Popover: Popover,
-	    PopoverTrigger: PopoverTrigger
+	    PopoverTrigger: PopoverTrigger,
+	    Breadcrumb: Breadcrumb,
+	    BreadcrumbItem: BreadcrumbItem,
+	    Thumbnail: Thumbnail,
+	    Progressbar: Progressbar
 	  }
 	};
 	// </script>
 
 /***/ },
-/* 37 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(38)
+	module.exports = __webpack_require__(42)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (false) {
@@ -10667,7 +10872,7 @@
 	}
 
 /***/ },
-/* 38 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10676,105 +10881,121 @@
 	  value: true
 	});
 
-	var _alert = __webpack_require__(39);
+	var _alert = __webpack_require__(43);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _anchor = __webpack_require__(43);
+	var _anchor = __webpack_require__(47);
 
 	var _anchor2 = _interopRequireDefault(_anchor);
 
-	var _button = __webpack_require__(47);
+	var _button = __webpack_require__(51);
 
 	var _button2 = _interopRequireDefault(_button);
 
-	var _buttonGroup = __webpack_require__(50);
+	var _buttonGroup = __webpack_require__(54);
 
 	var _buttonGroup2 = _interopRequireDefault(_buttonGroup);
 
-	var _carousel = __webpack_require__(53);
+	var _carousel = __webpack_require__(57);
 
 	var _carousel2 = _interopRequireDefault(_carousel);
 
-	var _carouselItem = __webpack_require__(57);
+	var _carouselItem = __webpack_require__(61);
 
 	var _carouselItem2 = _interopRequireDefault(_carouselItem);
 
-	var _col = __webpack_require__(60);
+	var _col = __webpack_require__(64);
 
 	var _col2 = _interopRequireDefault(_col);
 
-	var _dropdownButton = __webpack_require__(63);
+	var _dropdownButton = __webpack_require__(67);
 
 	var _dropdownButton2 = _interopRequireDefault(_dropdownButton);
 
-	var _form = __webpack_require__(68);
+	var _form = __webpack_require__(72);
 
 	var _form2 = _interopRequireDefault(_form);
 
-	var _formInput = __webpack_require__(71);
+	var _formInput = __webpack_require__(75);
 
 	var _formInput2 = _interopRequireDefault(_formInput);
 
-	var _label = __webpack_require__(74);
+	var _label = __webpack_require__(78);
 
 	var _label2 = _interopRequireDefault(_label);
 
-	var _menuitem = __webpack_require__(77);
+	var _menuitem = __webpack_require__(81);
 
 	var _menuitem2 = _interopRequireDefault(_menuitem);
 
-	var _modal = __webpack_require__(80);
+	var _modal = __webpack_require__(84);
 
 	var _modal2 = _interopRequireDefault(_modal);
 
-	var _nav = __webpack_require__(88);
+	var _nav = __webpack_require__(92);
 
 	var _nav2 = _interopRequireDefault(_nav);
 
-	var _navItem = __webpack_require__(91);
+	var _navItem = __webpack_require__(95);
 
 	var _navItem2 = _interopRequireDefault(_navItem);
 
-	var _pagination = __webpack_require__(94);
+	var _pagination = __webpack_require__(98);
 
 	var _pagination2 = _interopRequireDefault(_pagination);
 
-	var _panel = __webpack_require__(98);
+	var _panel = __webpack_require__(102);
 
 	var _panel2 = _interopRequireDefault(_panel);
 
-	var _popover = __webpack_require__(101);
+	var _popover = __webpack_require__(105);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _popoverTrigger = __webpack_require__(107);
+	var _popoverTrigger = __webpack_require__(111);
 
 	var _popoverTrigger2 = _interopRequireDefault(_popoverTrigger);
 
-	var _row = __webpack_require__(114);
+	var _row = __webpack_require__(118);
 
 	var _row2 = _interopRequireDefault(_row);
 
-	var _splitButton = __webpack_require__(117);
+	var _splitButton = __webpack_require__(121);
 
 	var _splitButton2 = _interopRequireDefault(_splitButton);
 
-	var _tab = __webpack_require__(120);
+	var _tab = __webpack_require__(124);
 
 	var _tab2 = _interopRequireDefault(_tab);
 
-	var _tabItem = __webpack_require__(122);
+	var _tabItem = __webpack_require__(126);
 
 	var _tabItem2 = _interopRequireDefault(_tabItem);
 
-	var _tooltip = __webpack_require__(126);
+	var _tooltip = __webpack_require__(130);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _tooltipTrigger = __webpack_require__(129);
+	var _tooltipTrigger = __webpack_require__(133);
 
 	var _tooltipTrigger2 = _interopRequireDefault(_tooltipTrigger);
+
+	var _breadcrumb = __webpack_require__(138);
+
+	var _breadcrumb2 = _interopRequireDefault(_breadcrumb);
+
+	var _breadcrumbItem = __webpack_require__(141);
+
+	var _breadcrumbItem2 = _interopRequireDefault(_breadcrumbItem);
+
+	var _thumbnail = __webpack_require__(144);
+
+	var _thumbnail2 = _interopRequireDefault(_thumbnail);
+
+	var _progressbar = __webpack_require__(147);
+
+	var _progressbar2 = _interopRequireDefault(_progressbar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10803,19 +11024,23 @@
 	  Tab: _tab2.default,
 	  TabItem: _tabItem2.default,
 	  Tooltip: _tooltip2.default,
-	  TooltipTrigger: _tooltipTrigger2.default
+	  TooltipTrigger: _tooltipTrigger2.default,
+	  Breadcrumb: _breadcrumb2.default,
+	  BreadcrumbItem: _breadcrumbItem2.default,
+	  Thumbnail: _thumbnail2.default,
+	  Progressbar: _progressbar2.default
 	};
 	// </script>
 	// <script>
 
 /***/ },
-/* 39 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(40)
+	module.exports = __webpack_require__(44)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(42)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(46)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10833,7 +11058,7 @@
 	}
 
 /***/ },
-/* 40 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10842,7 +11067,7 @@
 	  value: true
 	});
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -10873,7 +11098,7 @@
 	 */
 
 /***/ },
-/* 41 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10917,19 +11142,19 @@
 
 
 /***/ },
-/* 42 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\"><slot></slot></div>";
 
 /***/ },
-/* 43 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(44)
+	module.exports = __webpack_require__(48)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(46)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(50)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10947,7 +11172,7 @@
 	}
 
 /***/ },
-/* 44 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10956,7 +11181,7 @@
 	  value: true
 	});
 
-	var _linkMixin = __webpack_require__(45);
+	var _linkMixin = __webpack_require__(49);
 
 	var _linkMixin2 = _interopRequireDefault(_linkMixin);
 
@@ -10999,7 +11224,7 @@
 	// <script>
 
 /***/ },
-/* 45 */
+/* 49 */
 /***/ function(module, exports) {
 
 	/**
@@ -11020,19 +11245,19 @@
 
 
 /***/ },
-/* 46 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = "<a href=\"{{href}}\" target=\"{{target}}\" @click=\"clickHandle\"><slot></slot></a>";
 
 /***/ },
-/* 47 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(48)
+	module.exports = __webpack_require__(52)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(49)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(53)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11050,7 +11275,7 @@
 	}
 
 /***/ },
-/* 48 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11059,7 +11284,7 @@
 	  value: true
 	});
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -11105,19 +11330,19 @@
 	 */
 
 /***/ },
-/* 49 */
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = "<button v-bind:class=\"classes\" v-bind:type=\"type\"><slot></slot></button>";
 
 /***/ },
-/* 50 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(51)
+	module.exports = __webpack_require__(55)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(52)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(56)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11135,7 +11360,7 @@
 	}
 
 /***/ },
-/* 51 */
+/* 55 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11194,19 +11419,19 @@
 	// </script>
 
 /***/ },
-/* 52 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<div role=\"group\" v-bind:class=\"classes\"><slot></slot></div>";
 
 /***/ },
-/* 53 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(54)
+	module.exports = __webpack_require__(58)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(56)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(60)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11224,7 +11449,7 @@
 	}
 
 /***/ },
-/* 54 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11233,11 +11458,11 @@
 	  value: true
 	});
 
-	var _vue = __webpack_require__(29);
+	var _vue = __webpack_require__(33);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _transitionEvents = __webpack_require__(55);
+	var _transitionEvents = __webpack_require__(59);
 
 	var _transitionEvents2 = _interopRequireDefault(_transitionEvents);
 
@@ -11400,7 +11625,7 @@
 	// </script>
 
 /***/ },
-/* 55 */
+/* 59 */
 /***/ function(module, exports) {
 
 	/**
@@ -11519,19 +11744,19 @@
 
 
 /***/ },
-/* 56 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = "<div id=\"carousel\" class=\"carousel slide\"><ol v-if=\"indicators\" class=\"carousel-indicators\"><li v-for=\"i in count\" v-bind:class=\"{&quot;active&quot;:$index===activeIndex}\"></li></ol><div @mouseover=\"pause\" @mouseout=\"play\" class=\"carousel-inner\"><slot></slot></div><a v-if=\"controls\" @click=\"prev\" class=\"left carousel-control\"><span class=\"glyphicon glyphicon-chevron-left\"></span><span class=\"sr-only\">Previous</span></a><a v-if=\"controls\" @click=\"next\" class=\"right carousel-control\"><span class=\"glyphicon glyphicon-chevron-right\"></span><span class=\"sr-only\">Next</span></a></div>";
 
 /***/ },
-/* 57 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(58)
+	module.exports = __webpack_require__(62)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(59)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(63)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11549,7 +11774,7 @@
 	}
 
 /***/ },
-/* 58 */
+/* 62 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11600,19 +11825,19 @@
 	// </script>
 
 /***/ },
-/* 59 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\" class=\"item\"><slot></slot></div>";
 
 /***/ },
-/* 60 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(61)
+	module.exports = __webpack_require__(65)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(62)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(66)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11630,7 +11855,7 @@
 	}
 
 /***/ },
-/* 61 */
+/* 65 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11689,19 +11914,19 @@
 	// </script>
 
 /***/ },
-/* 62 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\"><slot></slot></div>";
 
 /***/ },
-/* 63 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(64)
+	module.exports = __webpack_require__(68)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(67)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(71)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11719,7 +11944,7 @@
 	}
 
 /***/ },
-/* 64 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11728,7 +11953,7 @@
 	  value: true
 	});
 
-	var _menuButtonMixin = __webpack_require__(65);
+	var _menuButtonMixin = __webpack_require__(69);
 
 	var _menuButtonMixin2 = _interopRequireDefault(_menuButtonMixin);
 
@@ -11761,16 +11986,16 @@
 	// <script>
 
 /***/ },
-/* 65 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * 下拉框按钮mixin
 	 */
 
-	var ButtonGroup = __webpack_require__(50);
-	var Button = __webpack_require__(47);
-	var ButtonMixin = __webpack_require__(66);
+	var ButtonGroup = __webpack_require__(54);
+	var Button = __webpack_require__(51);
+	var ButtonMixin = __webpack_require__(70);
 
 	module.exports = {
 	  mixins:[ButtonMixin],
@@ -11817,7 +12042,7 @@
 
 
 /***/ },
-/* 66 */
+/* 70 */
 /***/ function(module, exports) {
 
 	/**
@@ -11838,19 +12063,19 @@
 
 
 /***/ },
-/* 67 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = "<button-group @click=\"toggleOpen\" v-bind:class=\"classes\"><button v-bind:bs-style=\"bsStyle\" v-bind:bs-size=\"size\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" class=\"dropdown-toggle\">{{title}}<span class=\"caret\"></span></button><ul class=\"dropdown-menu\"><slot></slot></ul></button-group>";
 
 /***/ },
-/* 68 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(69)
+	module.exports = __webpack_require__(73)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(70)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(74)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11868,7 +12093,7 @@
 	}
 
 /***/ },
-/* 69 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11877,7 +12102,7 @@
 	  value: true
 	});
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -11955,19 +12180,19 @@
 	 */
 
 /***/ },
-/* 70 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = "<form v-bind:class=\"classes\"><slot></slot></form>";
 
 /***/ },
-/* 71 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(72)
+	module.exports = __webpack_require__(76)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(73)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(77)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11985,7 +12210,7 @@
 	}
 
 /***/ },
-/* 72 */
+/* 76 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12055,19 +12280,19 @@
 	// </script>
 
 /***/ },
-/* 73 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"form-group\"><label v-bind:class=\"lblClass\">{{label}}</label><div v-if=\"horizontal\" v-bind:class=\"iptClass\"><input v-el:input=\"v-el:input\" v-bind:type=\"type\" v-bind:placeholder=\"placeholder\" v-model=\"model\" class=\"form-control\"/></div><input v-if=\"!horizontal\" v-el:input=\"v-el:input\" v-bind:type=\"type\" v-bind:placeholder=\"placeholder\" v-model=\"model\" class=\"form-control\"/></div>";
 
 /***/ },
-/* 74 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(75)
+	module.exports = __webpack_require__(79)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(76)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(80)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12085,7 +12310,7 @@
 	}
 
 /***/ },
-/* 75 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12094,15 +12319,15 @@
 	  value: true
 	});
 
-	var _anchor = __webpack_require__(43);
+	var _anchor = __webpack_require__(47);
 
 	var _anchor2 = _interopRequireDefault(_anchor);
 
-	var _linkMixin = __webpack_require__(45);
+	var _linkMixin = __webpack_require__(49);
 
 	var _linkMixin2 = _interopRequireDefault(_linkMixin);
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -12141,19 +12366,19 @@
 	 */
 
 /***/ },
-/* 76 */
+/* 80 */
 /***/ function(module, exports) {
 
 	module.exports = "<span v-bind:class=\"classes\" class=\"label\"><span v-if=\"href === null\"><slot></slot></span><anchor v-if=\"href != null\" v-bind:href=\"href\" v-bind:target=\"target\"><slot></slot></anchor></span>";
 
 /***/ },
-/* 77 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(78)
+	module.exports = __webpack_require__(82)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(79)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(83)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12171,7 +12396,7 @@
 	}
 
 /***/ },
-/* 78 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12180,11 +12405,11 @@
 	  value: true
 	});
 
-	var _anchor = __webpack_require__(43);
+	var _anchor = __webpack_require__(47);
 
 	var _anchor2 = _interopRequireDefault(_anchor);
 
-	var _linkMixin = __webpack_require__(45);
+	var _linkMixin = __webpack_require__(49);
 
 	var _linkMixin2 = _interopRequireDefault(_linkMixin);
 
@@ -12216,20 +12441,20 @@
 	// </script>
 
 /***/ },
-/* 79 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = "<li><anchor v-bind:href=\"href\" v-bind:target=\"target\" v-bind:click-handle=\"clickHandle\"><slot></slot></anchor></li>";
 
 /***/ },
-/* 80 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(81)
-	module.exports = __webpack_require__(83)
+	__webpack_require__(85)
+	module.exports = __webpack_require__(87)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(87)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(91)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12247,16 +12472,16 @@
 	}
 
 /***/ },
-/* 81 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(82);
+	var content = __webpack_require__(86);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(39)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -12273,10 +12498,10 @@
 	}
 
 /***/ },
-/* 82 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(34)();
+	exports = module.exports = __webpack_require__(38)();
 	// imports
 
 
@@ -12287,7 +12512,7 @@
 
 
 /***/ },
-/* 83 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12296,7 +12521,7 @@
 	  value: true
 	});
 
-	var _overlay = __webpack_require__(84);
+	var _overlay = __webpack_require__(88);
 
 	var _overlay2 = _interopRequireDefault(_overlay);
 
@@ -12378,13 +12603,13 @@
 	// </script>
 
 /***/ },
-/* 84 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(85)
+	module.exports = __webpack_require__(89)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(86)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(90)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12402,7 +12627,7 @@
 	}
 
 /***/ },
-/* 85 */
+/* 89 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12440,25 +12665,25 @@
 	// </script>
 
 /***/ },
-/* 86 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"isShow\" class=\"modal-backdrop fade\"></div>";
 
 /***/ },
-/* 87 */
+/* 91 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"isIn\" class=\"modal fade\"><Overlay v-bind:show=\"show\"></Overlay><div v-bind:class=\"classes\"><div class=\"modal-content\"><div class=\"modal-header\"><slot name=\"modal-header\"></slot></div><div class=\"modal-body\"><slot name=\"modal-body\"></slot></div><div class=\"modal-footer\"><slot name=\"modal-footer\"></slot></div></div></div></div>";
 
 /***/ },
-/* 88 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(89)
+	module.exports = __webpack_require__(93)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(90)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(94)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12476,7 +12701,7 @@
 	}
 
 /***/ },
-/* 89 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12485,7 +12710,7 @@
 	  value: true
 	});
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -12516,19 +12741,19 @@
 	 */
 
 /***/ },
-/* 90 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul v-bind:class=\"classes\" class=\"nav\"><slot></slot></ul>";
 
 /***/ },
-/* 91 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(92)
+	module.exports = __webpack_require__(96)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(93)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(97)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12546,7 +12771,7 @@
 	}
 
 /***/ },
-/* 92 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12555,11 +12780,11 @@
 	  value: true
 	});
 
-	var _anchor = __webpack_require__(43);
+	var _anchor = __webpack_require__(47);
 
 	var _anchor2 = _interopRequireDefault(_anchor);
 
-	var _linkMixin = __webpack_require__(45);
+	var _linkMixin = __webpack_require__(49);
 
 	var _linkMixin2 = _interopRequireDefault(_linkMixin);
 
@@ -12591,19 +12816,19 @@
 	// </script>
 
 /***/ },
-/* 93 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = "<li v-bind:class=\"disabled\"><anchor v-bind:href=\"href\" v-bind:target=\"target\" v-bind:click-handle=\"clickHandle\"><slot></slot></anchor></li>";
 
 /***/ },
-/* 94 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(95)
+	module.exports = __webpack_require__(99)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(97)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(101)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12621,7 +12846,7 @@
 	}
 
 /***/ },
-/* 95 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12630,15 +12855,15 @@
 	  value: true
 	});
 
-	var _classCallCheck2 = __webpack_require__(96);
+	var _classCallCheck2 = __webpack_require__(100);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-	var _navItem = __webpack_require__(91);
+	var _navItem = __webpack_require__(95);
 
 	var _navItem2 = _interopRequireDefault(_navItem);
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -12820,7 +13045,7 @@
 	// </script>
 
 /***/ },
-/* 96 */
+/* 100 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12834,19 +13059,19 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 97 */
+/* 101 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul v-bind:class=\"classes\"><nav-item v-for=\"instance in pages\" v-bind:class=\"{active:instance.val === activePage,disabled:instance.disabled}\" @click=\"onSelect(instance)\">{{instance.val}}</nav-item></ul>";
 
 /***/ },
-/* 98 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(99)
+	module.exports = __webpack_require__(103)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(100)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(104)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12864,7 +13089,7 @@
 	}
 
 /***/ },
-/* 99 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12873,7 +13098,7 @@
 	  value: true
 	});
 
-	var _bsMixin = __webpack_require__(41);
+	var _bsMixin = __webpack_require__(45);
 
 	var _bsMixin2 = _interopRequireDefault(_bsMixin);
 
@@ -12905,20 +13130,20 @@
 	 */
 
 /***/ },
-/* 100 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\"><div class=\"panel-heading\"><slot name=\"panel-header\"></slot></div><div class=\"panel-body\"><slot name=\"panel-body\"></slot></div></div>";
 
 /***/ },
-/* 101 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(102)
-	module.exports = __webpack_require__(104)
+	__webpack_require__(106)
+	module.exports = __webpack_require__(108)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(106)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(110)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -12936,16 +13161,16 @@
 	}
 
 /***/ },
-/* 102 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(103);
+	var content = __webpack_require__(107);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(39)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -12962,10 +13187,10 @@
 	}
 
 /***/ },
-/* 103 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(34)();
+	exports = module.exports = __webpack_require__(38)();
 	// imports
 
 
@@ -12976,7 +13201,7 @@
 
 
 /***/ },
-/* 104 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12985,7 +13210,7 @@
 	  value: true
 	});
 
-	var _poptipMixin = __webpack_require__(105);
+	var _poptipMixin = __webpack_require__(109);
 
 	var _poptipMixin2 = _interopRequireDefault(_poptipMixin);
 
@@ -13028,7 +13253,7 @@
 	 */
 
 /***/ },
-/* 105 */
+/* 109 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -13078,20 +13303,20 @@
 
 
 /***/ },
-/* 106 */
+/* 110 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\" role=\"tooltip\"><div v-bind:style=\"arrowStyle\" class=\"arrow\"></div><h3 v-if=\"title!=&quot;&quot;\" class=\"popover-title\">{{title}}</h3><div class=\"popover-content\"><slot></slot></div></div>";
 
 /***/ },
-/* 107 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(108)
-	module.exports = __webpack_require__(110)
+	__webpack_require__(112)
+	module.exports = __webpack_require__(114)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(113)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(117)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13109,16 +13334,16 @@
 	}
 
 /***/ },
-/* 108 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(109);
+	var content = __webpack_require__(113);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(39)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -13135,10 +13360,10 @@
 	}
 
 /***/ },
-/* 109 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(34)();
+	exports = module.exports = __webpack_require__(38)();
 	// imports
 
 
@@ -13149,7 +13374,7 @@
 
 
 /***/ },
-/* 110 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13158,11 +13383,11 @@
 	  value: true
 	});
 
-	var _popover = __webpack_require__(101);
+	var _popover = __webpack_require__(105);
 
 	var _popover2 = _interopRequireDefault(_popover);
 
-	var _tipTriggerMixin = __webpack_require__(111);
+	var _tipTriggerMixin = __webpack_require__(115);
 
 	var _tipTriggerMixin2 = _interopRequireDefault(_tipTriggerMixin);
 
@@ -13215,11 +13440,11 @@
 	// </script>
 
 /***/ },
-/* 111 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue = __webpack_require__(29);
-	var elOffset = __webpack_require__(112);
+	var Vue = __webpack_require__(33);
+	var elOffset = __webpack_require__(116);
 	module.exports = {
 	  props:{
 	    trigger:{
@@ -13313,7 +13538,7 @@
 
 
 /***/ },
-/* 112 */
+/* 116 */
 /***/ function(module, exports) {
 
 	var ElOffset = function(el){
@@ -13379,19 +13604,19 @@
 
 
 /***/ },
-/* 113 */
+/* 117 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"popover-wrap\"><slot></slot><popover v-if=\"show\" v-ref:popover=\"v-ref:popover\" v-bind:title=\"title\" v-bind:style=\"tipPosition\" v-bind:placement=\"placement\">{{content}}</popover></div>";
 
 /***/ },
-/* 114 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(115)
+	module.exports = __webpack_require__(119)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(116)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(120)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13409,7 +13634,7 @@
 	}
 
 /***/ },
-/* 115 */
+/* 119 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13432,19 +13657,19 @@
 	// </script>
 
 /***/ },
-/* 116 */
+/* 120 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"row\"><slot></slot></div>";
 
 /***/ },
-/* 117 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(118)
+	module.exports = __webpack_require__(122)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(119)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(123)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13462,7 +13687,7 @@
 	}
 
 /***/ },
-/* 118 */
+/* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13471,7 +13696,7 @@
 	  value: true
 	});
 
-	var _menuButtonMixin = __webpack_require__(65);
+	var _menuButtonMixin = __webpack_require__(69);
 
 	var _menuButtonMixin2 = _interopRequireDefault(_menuButtonMixin);
 
@@ -13508,19 +13733,19 @@
 	// <script>
 
 /***/ },
-/* 119 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = "<button-group v-bind:class=\"classes\"><button v-bind:bs-style=\"bsStyle\" v-bind:size=\"size\" @click=\"_handleClick\">{{title}}</button><button @click=\"toggleOpen\" v-bind:bs-style=\"bsStyle\" v-bind:size=\"size\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" class=\"dropdown-toggle\"><span class=\"caret\"></span></button><ul class=\"dropdown-menu\"><slot></slot></ul></button-group>";
 
 /***/ },
-/* 120 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(121)
+	module.exports = __webpack_require__(125)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(125)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(129)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13538,7 +13763,7 @@
 	}
 
 /***/ },
-/* 121 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13547,19 +13772,19 @@
 	  value: true
 	});
 
-	var _vue = __webpack_require__(29);
+	var _vue = __webpack_require__(33);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _nav = __webpack_require__(88);
+	var _nav = __webpack_require__(92);
 
 	var _nav2 = _interopRequireDefault(_nav);
 
-	var _navItem = __webpack_require__(91);
+	var _navItem = __webpack_require__(95);
 
 	var _navItem2 = _interopRequireDefault(_navItem);
 
-	var _tabItem = __webpack_require__(122);
+	var _tabItem = __webpack_require__(126);
 
 	var _tabItem2 = _interopRequireDefault(_tabItem);
 
@@ -13644,13 +13869,13 @@
 	// </script>
 
 /***/ },
-/* 122 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(123)
+	module.exports = __webpack_require__(127)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(124)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(128)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13668,7 +13893,7 @@
 	}
 
 /***/ },
-/* 123 */
+/* 127 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13728,25 +13953,25 @@
 	// </script>
 
 /***/ },
-/* 124 */
+/* 128 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\" class=\"tab-pane fade\"><slot></slot></div>";
 
 /***/ },
-/* 125 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = "<div><nav is=\"nav\" bs-style=\"tabs\"><nav-item v-for=\"item in tabList\" v-bind:class=\"{'active':activeIndex==$index,'disabled':disabledList.indexOf($index)&gt;-1}\" @click=\"switchTab($index)\">{{item.title}}</nav-item></nav><div v-el:items=\"v-el:items\" class=\"tab-content\"><slot></slot></div></div>";
 
 /***/ },
-/* 126 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(127)
+	module.exports = __webpack_require__(131)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(128)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(132)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13764,7 +13989,7 @@
 	}
 
 /***/ },
-/* 127 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13773,7 +13998,7 @@
 	  value: true
 	});
 
-	var _poptipMixin = __webpack_require__(105);
+	var _poptipMixin = __webpack_require__(109);
 
 	var _poptipMixin2 = _interopRequireDefault(_poptipMixin);
 
@@ -13803,20 +14028,20 @@
 	// <script>
 
 /***/ },
-/* 128 */
+/* 132 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:class=\"classes\" role=\"tooltip\"><div class=\"tooltip-arrow\"></div><div class=\"tooltip-inner\"><slot></slot></div></div>";
 
 /***/ },
-/* 129 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(130)
-	module.exports = __webpack_require__(132)
+	__webpack_require__(134)
+	module.exports = __webpack_require__(136)
 
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(133)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(137)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -13834,16 +14059,16 @@
 	}
 
 /***/ },
-/* 130 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(131);
+	var content = __webpack_require__(135);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(35)(content, {});
+	var update = __webpack_require__(39)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -13860,10 +14085,10 @@
 	}
 
 /***/ },
-/* 131 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(34)();
+	exports = module.exports = __webpack_require__(38)();
 	// imports
 
 
@@ -13874,7 +14099,7 @@
 
 
 /***/ },
-/* 132 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13883,11 +14108,11 @@
 	  value: true
 	});
 
-	var _tooltip = __webpack_require__(126);
+	var _tooltip = __webpack_require__(130);
 
 	var _tooltip2 = _interopRequireDefault(_tooltip);
 
-	var _tipTriggerMixin = __webpack_require__(111);
+	var _tipTriggerMixin = __webpack_require__(115);
 
 	var _tipTriggerMixin2 = _interopRequireDefault(_tipTriggerMixin);
 
@@ -13933,19 +14158,353 @@
 	// </script>
 
 /***/ },
-/* 133 */
+/* 137 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"tooltip-wrap\"><slot></slot><tooltip v-if=\"show\" v-ref:tooltip=\"v-ref:tooltip\" v-bind:style=\"tipPosition\" v-bind:placement=\"placement\">{{content}}</tooltip></div>";
 
 /***/ },
-/* 134 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<h3>标签－Label</h3><panel><div slot=\"panel-header\">说明,需要添加is属性：is＝'label'</div><div slot=\"panel-body\"><div><p><strong class=\"pl-k\">'bs-style'</strong>：颜色(primary,success,danger...)</p><p><label is=\"label\" v-for=\"sle in styleList\" v-bind:bs-style=\"sle\">标签</label></p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-label\"><template>\n  <label is='label' bs-style='default'>\n    标签\n  </label>\n  <label is='label' bs-style='primary'>\n    标签\n  </label>\n  <label is='label' bs-style='info'>\n    标签\n  </label>\n  <!-- more -->\n</template>\n</textarea></p></div></div></panel><h3>按钮－Button</h3><panel id=\"button-example\"><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><strong class=\"pl-k\">'bs-style'</strong>：颜色(primary,success,danger...)</p><p><button v-for=\"sle in styleList\" v-bind:bs-style=\"sle\">按钮</button></p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><button bs-size=\"sm\">按钮</button><button bs-size=\"lg\" bs-style=\"primary\">按钮</button></p><p>关于click事件可以直接绑定<strong class=\"pl-k\">'on-click'</strong>或者<strong class=\"pl-k\">@click</strong><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-button\"><template>\n  <button bs-style='default',bs-size='xs'>\n    按钮\n  </button>\n  <button  bs-style='primary',bs-size='lg'>\n    按钮\n  </button>\n  <button bs-style='info',@click='clickHandle'>\n    按钮\n  </button>\n  <!-- more -->\n</template></textarea></p></p></div></div></panel><h3>按钮组－ButtonGroup</h3><panel><div slot=\"panel-header\">说明,slot位置可放置button和a控件</div><div slot=\"panel-body\"><div><p><button-group><button>left</button><button>center</button><button>right</button></button-group></p><p><string class=\"pl-k\">'bs-size'</string>：尺寸</p><p><button-group bs-size=\"lg\"><button>left</button><button>center</button><button>right</button></button-group></p><p><strong class=\"pl-k\">'align'</strong>：位置</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-buttongroup\"><template>\n  <button-group bs-size='lg'>\n    <button>\n      left\n    </button>\n    <button>\n      center\n    </button>\n    <button>\n      right\n    </button>\n  </button-group>\n</template></textarea></p></div></div></panel><h3>下拉按钮－DropdownButton</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><dropdown-button title=\"下拉框\" v-bind:dropdown=\"true\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></dropdown-button></p><p><strong class=\"pl-k\">'title'</strong>：下拉框标题</p><p><strong class=\"pl-k\">'dropdown'，</strong><strong class=\"pl-k\">'dropup'</strong>：布尔值，朝上或者向下</p><p><dropdown-button title=\"下拉框\" v-bind:dropup=\"true\" bs-size=\"sm\" bs-style=\"primary\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></dropdown-button></p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><strong class=\"pl-k\">'bs-style'</strong>：颜色</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-dropdown\"><template>\n  <dropdown-button title='下拉框' v-bind:dropup='true' bs-size='lg'>\n    <menu-item v-bind:href='#'>\n      link1\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link2\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link3\n    </menu-item>\n  </dropdown-button>\n</template></textarea></p></div></div></panel><h3>分裂按钮－SplitButton</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><split-button title=\"下拉框\" v-bind:dropup=\"true\" bs-style=\"danger\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></split-button></p><p><strong class=\"pl-k\">'title'</strong>：下拉框标题</p><p><strong class=\"pl-k\">'dropdown'，</strong><strong class=\"pl-k\">'dropup'</strong>：布尔值，朝上或者向下</p><p><split-button title=\"下拉框\" v-bind:dropup=\"true\" bs-size=\"sm\" bs-style=\"warning\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></split-button></p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><strong class=\"pl-k\">'bs-style'</strong>：颜色</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-splitbutton\"><template>\n  <split-button title='分裂框' v-bind:dropdown='true' bs-style='primary'>\n    <menu-item v-bind:href='#'>\n      link1\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link2\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link3\n    </menu-item>\n  </split-button>\n</template></textarea></p></div></div></panel><h3>警告框-Alert</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><alert bs-style=\"warning\">这是警告框</alert><alert bs-style=\"success\">这是成功提示框</alert></p><p><strong class=\"pl-k\">'bs-style'</strong>：颜色</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-alert\"><template>\n  <alert bs-style='warning'>\n      这是警告框\n  </alert>\n  <alert bs-style='success'>\n      这是成功提示框\n  </alert>\n</template>\n</textarea></p></div></div></panel><h3>模态框－Modal</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><button @click=\"toggleModal\" bs-style=\"primary\">运行模态框</button></p><modal v-bind:show.sync=\"showModal\"><div slot=\"modal-header\"><span type=\"button\" aria-label=\"close\" @click=\"closeModal\" class=\"close\"><span aria-hidden=\"true\">&times;</span></span><h4 class=\"modal-title\"> title</h4></div><div slot=\"modal-body\">内容。。</div><div slot=\"modal-footer\"><button @click=\"closeModal\">close</button></div></modal><p><strong class=\"pl-k\">'show'</strong>：bool值</p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-modal\"><template>\n  <modal v-bind:show.sync='showModal'>\n    <div slot='modal-header'>\n        <span class='close' type='button' aria-label='close' @click='closeModal'>\n          <span aria-hidden=\"true\">&times;</span>\n        </span>\n        <h4>\n          title\n        </h4>\n    </div>\n    <div slot='modal-body'>\n        content\n    </div>\n    <div slot='modal-footer'>\n        <button @click='closeModal'>close</button>\n    </div>\n  </modal>\n\n</template>\n<script>\n  export default{\n    data(){\n      return {\n        showModal:false\n      }\n    },\n    methods:{\n      closeModal(){\n        this.showModal = !this.showModal;\n      }\n    }\n  }\n</script></textarea></p></div></div></panel><h3>Tooltip</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><div v-bind:style=\"tooltipStyle\"><tooltip placement=\"bottom\" v-bind:show=\"true\">tobottom</tooltip></div></p><p><strong class=\"pl-k\">'placement'</strong>：位置(top,left,bottom,right)</p><p><strong class=\"pl-k\">'show'</strong>：bool值，是否显示</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-tooltip\"><template>\n  <tooltip placement='bottom' v-bind:show='true'>\n    提示按钮\n  </tooltip>\n</template></textarea></p></div></div></panel><h3>TooltipTrigger</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><tooltip-trigger trigger=\"click\" placement=\"bottom\" content=\"this is content\"><button bs-style=\"danger\">提示框</button></tooltip-trigger></p><p><strong class=\"pl-k\">'placement'</strong>：位置(top,left,bottom,right)</p><p><strong class=\"pl-k\">'trigger'</strong>：触发类型(hover,click)</p><p><strong class=\"pl-k\">'content'</strong>：提示内容</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-tooltiptrigger\"><template>\n  <tooltip-trigger\n    trigger='click'\n    placement='bottom'\n    content=\"this is content\"\n    >\n    <button bs-style='success'>提示框按钮</button>\n  </tooltip-trigger>\n</template></textarea></p></div></div></panel><h3>弹出提示框－Popover</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><div v-bind:style=\"popoverStyle\"><popover title=\"标题\" placement=\"top\" v-bind:show=\"true\">弹出框内容呢弹出框内容呢弹出框内容呢</popover></div></p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-popover\"><template>\n  <popover\n    title='标题'\n    placement='bottom'\n    v-bind:show='true'>\n    提示按钮\n  </popover>\n</template></textarea></p></div></div></panel><h3>弹出提示框－PopoverTrigger</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><popover-trigger trigger=\"click\" placement=\"left\" title=\"标题\" content=\"thisis conent\"><button bs-style=\"default\">popover弹出来</button></popover-trigger></p><p><strong class=\"pl-k\">'placement'</strong>：位置(top,left,bottom,right)</p><p><strong class=\"pl-k\">'trigger'</strong>：触发类型(hover,click)</p><p><strong class=\"pl-k\">'content'</strong>：提示内容</p><p><strong class=\"pl-k\">'title'</strong>：标题</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-popovertrigger\"><template>\n  <popover-trigger\n    trigger='click'\n    placement='left'\n    title='标题'\n    content=\"this is content\"\n    >\n    <button bs-style='info'>提示框按钮</button>\n  </popover-trigger>\n</template></textarea></p></div></div></panel><h3>选项卡－Tab</h3><panel><div slot=\"panel-header\">说明，tab，tab-item</div><div slot=\"panel-body\"><div><p><tab v-bind:on-select=\"clickTab\"><tab-item title=\"tab1\">tab1-content</tab-item><tab-item title=\"tab2\">tab2-content</tab-item><tab-item title=\"tab3\" v-bind:disabled=\"true\">tab3-content</tab-item></tab></p><p><strong class=\"pl-k\">'on-select'</strong>：选择事件回调</p><p><strong class=\"pl-k\">'title'</strong>：选项卡标题</p><p><strong class=\"pl-k\">'disabled'</strong>：bool值，是否可以选中</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-tab\"><template>\n  <tab v-bind:on-select='clickTab'>\n    <tab-item title='tab1'>\n      tab1 content\n    </tab-item>\n    <tab-item title='tab2'>\n      tab2 content\n    </tab-item>\n    <tab-item title='tab3' v-bind:disabled='true'>\n      tab3 content\n    </tab-item>\n  </tab>\n</template>\n<script>\n  export default{\n    methods:{\n      clickTab(tabItem){\n          alert(tabItem.title);\n      }\n    }\n  }\n</script></textarea></p></div></div></panel><h3>分页组件－Pagination</h3><panel><div slot=\"panel-header\">说明,pager</div><div slot=\"panel-body\"><div><p><pagination v-bind:active-page=\"6\" v-bind:items=\"10\" v-bind:on-select=\"selectPage\"></pagination></p><p><strong class=\"pl-k\">'active-page'</strong>：当前页</p><p><strong class=\"pl-k\">'items'</strong>：页数</p><p><strong class=\"pl-k\">'on-select'</strong>：页选中事件回调,返回pager类(包含val，name，active，disabled)</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-pagination\"><template>\n  <pagination\n    v-bind:active-page='6'\n    v-bind:items='10'\n    v-bind:on-select='selectPage'>\n\n  </pagination>\n</template>\n<script>\n  export default{\n    methods:{\n      selectPage(pager){\n          //pager.disabled,pager.active\n          alert(pager.name);\n      }\n    }\n  }\n</script></textarea></p></div></div></panel><h3>栅格－Row,Column</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><row><column xs=\"12\" sm=\"4\" md=\"4\">栅格系统1</column><column xs=\"12\" sm=\"4\" md=\"4\">栅格系统2</column><column xs=\"12\" sm=\"4\" md=\"4\">栅格系统3</column></row></p><p><strong class=\"pl-k\">'xs'</strong>：数字类型</p><p><strong class=\"pl-k\">'sm'</strong>：数字类型</p><p><strong class=\"pl-k\">'md'</strong>：数字类型</p><p><strong class=\"pl-k\">'lg'</strong>：数字类型</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-rowcol\"><template>\n  <row>\n    <column xs='12' sm='4' md='4' lg='4'>\n      栅格系统1\n    </column>\n    <column xs='12' sm='4' md='4' lg='4'>\n      栅格系统2\n    </column>\n    <column xs='12' sm='4' md='4' lg='4'>\n      栅格系统3\n    </column>\n  </row>\n</template></textarea></p></div></div></panel><h3>面板－panel</h3><panel><div slot=\"panel-header\">标题</div><div slot=\"panel-body\"><p>内容</p><p><strong class=\"pl-k\">'slot=panel-header'</strong>：标题部分</p><p><strong class=\"pl-k\">'slot=panel-body'</strong>：内容部分</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-panel\"><template>\n  <panel  bs-style='info'>\n    <div slot='panel-header'>\n        标题\n    </div>\n    <div slot='panel-body'>\n        内容\n    </div>\n  </panel>\n</template></textarea></p></div></panel><h3>跑马灯－Carousel</h3><panel><div slot=\"panel-header\">说明，carousel，carousel-item</div><div slot=\"panel-body\"><p><carousel style=\"width:650px;\"><carousel-item><img src=\"" + __webpack_require__(135) + "\"/></carousel-item><carousel-item><img src=\"" + __webpack_require__(135) + "\"/></carousel-item><carousel-item><img src=\"" + __webpack_require__(135) + "\"/></carousel-item></carousel></p><p><strong class=\"pl-k\">'interval'</strong>：数字：3000（默认3秒），间隔时间</p><p><strong class=\"pl-k\">'controls'</strong>：bool值，控制上下滚动点击事件</p><p><strong class=\"pl-k\">'indicators'</strong>：bool值，显示锚点</p><p><strong class=\"pl-k\">'pause-on-hover'</strong>：bool值，鼠标悬停暂停滚动</p><p><strong class=\"pl-k\">'slide'</strong>：bool值，自动滚动</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-carousel\"><template>\n  <carousel\n  interval='5000'\n  v-bind:controls='true',\n  v-bind:slide='true'\n  >\n    <carousel-item>\n      <img src='" + __webpack_require__(135) + "' alt='' />\n    </carousel-item>\n    <carousel-item>\n      <img src='" + __webpack_require__(135) + "' alt='' />\n    </carousel-item>\n    <carousel-item>\n      <img src='" + __webpack_require__(135) + "' alt='' />\n    </carousel-item>\n  </carousel>\n</template>\n</textarea></p></div></panel><h3>表单－Form</h3><panel><div slot=\"panel-header\">说明，form,form-input</div><div slot=\"panel-body\"><p><form is=\"form\" bs-style=\"horizontal\" v-bind:layout=\"{sm:&quot;3,9&quot;,md:&quot;2,8&quot;}\"><form-input label=\"输入框1\" placeholder=\"输入框12\" v-bind:model.sync=\"value\"></form-input></form></p><p>{{value}}</p><p><strong class=\"pl-ent\">form</strong></p><p><strong class=\"pl-k\">'bs-style'</strong>：布局类型,horizontal,inline</p><p><strong class=\"pl-k\">'layout'</strong>：布局类型为horizontal时，分配sm，md大小，例如：md='2-10',sm='3-9'</p><p><strong class=\"pl-ent\">form-input</strong></p><p><strong class=\"pl-k\">'label'</strong>：Label内容</p><p><strong class=\"pl-k\">'placeholder'</strong>：placeholder提示语</p><p><strong class=\"pl-k\">'model'</strong>：双向绑定关键字</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-form\"><template id=\"\">\n  <form\n    is='form'\n    bs-style='horizontal'\n    v-bind:layout='{sm:\"3,9\",md:\"2,8\"}'\n    >\n      <form-input\n        type='text'\n        label='输入框1'\n        placeholder='输入框12'\n        v-bind:model.sync='value'\n        >\n\n      </form-input>\n  </form>\n</template>\n<script>\n  export default{\n    data(){\n      return{\n        value:\"text\"\n      }\n    }\n  }\n</script></textarea></p></div></panel>";
+	module.exports = __webpack_require__(139)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(140)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./breadcrumb.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./breadcrumb.vue","-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./breadcrumb.vue"], function () {
+	var newOptions = require("-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./breadcrumb.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./breadcrumb.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
 
 /***/ },
-/* 135 */
+/* 139 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template lang='jade'>
+	// ol.breadcrumb
+	//   slot
+	// </template>
+	// <script>
+	/**
+	 * 面包屑-父容器
+	 * tag:breadcrumb
+	 */
+	exports.default = {};
+	// </script>
+
+/***/ },
+/* 140 */
+/***/ function(module, exports) {
+
+	module.exports = "<ol class=\"breadcrumb\"><slot></slot></ol>";
+
+/***/ },
+/* 141 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(142)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(143)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./breadcrumbItem.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./breadcrumbItem.vue","-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./breadcrumbItem.vue"], function () {
+	var newOptions = require("-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./breadcrumbItem.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./breadcrumbItem.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 142 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template lang='jade'>
+	// li(v-bind:class='classes')
+	//   a(v-if='href != null',v-bind:href='href')
+	//     slot
+	//   slot(v-if='href === null')
+	// </template>
+	// <script>
+	/**
+	 * 面包屑项－子项
+	 * @param href 链接地址
+	 * @param active 激活状态
+	 */
+	exports.default = {
+	  props: {
+	    active: {
+	      type: Boolean,
+	      default: false
+	    },
+	    href: {
+	      type: String,
+	      default: null
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      classes: {}
+	    };
+	  },
+	  created: function created() {
+	    if (this.active) {
+	      this.classes['active'] = this.active;
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 143 */
+/***/ function(module, exports) {
+
+	module.exports = "<li v-bind:class=\"classes\"><a v-if=\"href != null\" v-bind:href=\"href\"><slot></slot></a><slot v-if=\"href === null\"></slot></li>";
+
+/***/ },
+/* 144 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(145)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(146)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./thumbnail.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./thumbnail.vue","-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./thumbnail.vue"], function () {
+	var newOptions = require("-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./thumbnail.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./thumbnail.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 145 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _linkMixin = __webpack_require__(49);
+
+	var _linkMixin2 = _interopRequireDefault(_linkMixin);
+
+	var _anchor = __webpack_require__(47);
+
+	var _anchor2 = _interopRequireDefault(_anchor);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// <template lang='jade'>
+	// div.thumbnail
+	//   anchor(v-bind:href='href',v-bind:target='target')
+	//     img(v-bind:src='src',v-bind:alt='alt')
+	//   div.caption
+	//     slot
+	// </template>
+	// <script>
+	/**
+	 * 缩略图
+	 */
+	exports.default = {
+	  mixins: [_linkMixin2.default],
+	  props: {
+	    src: {
+	      type: String,
+	      required: true
+	    },
+	    alt: {
+	      type: String,
+	      default: ''
+	    }
+	  },
+	  components: {
+	    Anchor: _anchor2.default
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 146 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"thumbnail\"><anchor v-bind:href=\"href\" v-bind:target=\"target\"><img v-bind:src=\"src\" v-bind:alt=\"alt\"/></anchor><div class=\"caption\"><slot></slot></div></div>";
+
+/***/ },
+/* 147 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(148)
+
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(149)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./progressbar.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./progressbar.vue","-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./progressbar.vue"], function () {
+	var newOptions = require("-!babel!./../../vue-loader/lib/selector.js?type=script&index=0!./progressbar.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../vue-loader/lib/selector.js?type=template&index=0!./progressbar.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 148 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _bsMixin = __webpack_require__(45);
+
+	var _bsMixin2 = _interopRequireDefault(_bsMixin);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  mixins: [_bsMixin2.default],
+	  props: {
+	    bsStyle: {
+	      type: String,
+	      default: 'primary'
+	    },
+	    progress: {
+	      type: Number,
+	      default: 0,
+	      required: true
+	    },
+	    min: {
+	      type: Number,
+	      default: 0
+	    },
+	    max: {
+	      type: Number,
+	      default: 100
+	    },
+	    striped: {
+	      type: Boolean,
+	      default: false
+	    },
+	    animation: {
+	      type: Boolean,
+	      default: false
+	    }
+	  },
+	  created: function created() {
+	    //条纹效果
+	    if (this.striped) {
+	      this.classes[this.tag + '-striped'] = true;
+	    }
+	    if (this.animation) {
+	      this.classes['active'] = true;
+	    }
+	  },
+	  ready: function ready() {
+
+	    this.progressing();
+	  },
+
+	  computed: {
+	    beProgress: {
+	      get: function get() {
+	        return this.progress;
+	      },
+	      set: function set(val) {
+	        this.$els.progressbar.style['width'] = val + "%";
+	      }
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      tag: 'progress-bar',
+	      classes: {},
+	      progressStyle: {}
+	    };
+	  },
+
+	  methods: {
+	    progressing: function progressing() {
+	      this.beProgress = this.progress > this.max ? this.max : this.progress < this.min ? this.min : this.progress;
+	    }
+	  },
+	  watch: {
+	    progress: function progress(val) {
+	      this.progressing();
+	    }
+	  }
+	};
+	// </script>
+	// <template lang='jade'>
+	// div.progress
+	//   div(v-bind:class='classes',role="progressbar",v-el:progressbar)
+	//     slot
+	// </template>
+	// <script>
+	/**
+	 *
+	 */
+
+/***/ },
+/* 149 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"progress\"><div v-bind:class=\"classes\" role=\"progressbar\" v-el:progressbar=\"v-el:progressbar\"><slot></slot></div></div>";
+
+/***/ },
+/* 150 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = "<h3 id=\"vbs-label\">标签－Label</h3><panel><div slot=\"panel-header\">说明,需要添加is属性：is＝'label'</div><div slot=\"panel-body\"><div><p><strong class=\"pl-k\">'bs-style'</strong>：颜色(primary,success,danger...)</p><p><label is=\"label\" v-for=\"sle in styleList\" v-bind:bs-style=\"sle\">标签</label></p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-label\"><template>\n  <label is='label' bs-style='default'>\n    标签\n  </label>\n  <label is='label' bs-style='primary'>\n    标签\n  </label>\n  <label is='label' bs-style='info'>\n    标签\n  </label>\n  <!-- more -->\n</template>\n</textarea></p></div></div></panel><h3 id=\"vbs-button\">按钮－Button</h3><panel id=\"button-example\"><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><strong class=\"pl-k\">'bs-style'</strong>：颜色(primary,success,danger...)</p><p><button v-for=\"sle in styleList\" v-bind:bs-style=\"sle\">按钮</button></p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><button bs-size=\"sm\">按钮</button><button bs-size=\"lg\" bs-style=\"primary\">按钮</button></p><p>关于click事件可以直接绑定<strong class=\"pl-k\">'on-click'</strong>或者<strong class=\"pl-k\">@click</strong><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-button\"><template>\n  <button bs-style='default',bs-size='xs'>\n    按钮\n  </button>\n  <button  bs-style='primary',bs-size='lg'>\n    按钮\n  </button>\n  <button bs-style='info',@click='clickHandle'>\n    按钮\n  </button>\n  <!-- more -->\n</template></textarea></p></p></div></div></panel><h3>按钮组－ButtonGroup</h3><panel><div slot=\"panel-header\">说明,slot位置可放置button和a控件</div><div slot=\"panel-body\"><div><p><button-group><button>left</button><button>center</button><button>right</button></button-group></p><p><string class=\"pl-k\">'bs-size'</string>：尺寸</p><p><button-group bs-size=\"lg\"><button>left</button><button>center</button><button>right</button></button-group></p><p><strong class=\"pl-k\">'align'</strong>：位置</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-buttongroup\"><template>\n  <button-group bs-size='lg'>\n    <button>\n      left\n    </button>\n    <button>\n      center\n    </button>\n    <button>\n      right\n    </button>\n  </button-group>\n</template></textarea></p></div></div></panel><h3>下拉按钮－DropdownButton</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><dropdown-button title=\"下拉框\" v-bind:dropdown=\"true\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></dropdown-button></p><p><strong class=\"pl-k\">'title'</strong>：下拉框标题</p><p><strong class=\"pl-k\">'dropdown'，</strong><strong class=\"pl-k\">'dropup'</strong>：布尔值，朝上或者向下</p><p><dropdown-button title=\"下拉框\" v-bind:dropup=\"true\" bs-size=\"sm\" bs-style=\"primary\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></dropdown-button></p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><strong class=\"pl-k\">'bs-style'</strong>：颜色</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-dropdown\"><template>\n  <dropdown-button title='下拉框' v-bind:dropup='true' bs-size='lg'>\n    <menu-item v-bind:href='#'>\n      link1\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link2\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link3\n    </menu-item>\n  </dropdown-button>\n</template></textarea></p></div></div></panel><h3>分裂按钮－SplitButton</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><split-button title=\"下拉框\" v-bind:dropup=\"true\" bs-style=\"danger\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></split-button></p><p><strong class=\"pl-k\">'title'</strong>：下拉框标题</p><p><strong class=\"pl-k\">'dropdown'，</strong><strong class=\"pl-k\">'dropup'</strong>：布尔值，朝上或者向下</p><p><split-button title=\"下拉框\" v-bind:dropup=\"true\" bs-size=\"sm\" bs-style=\"warning\"><menu-item v-for=\"lk in linkList\" v-bind:href=\"lk.url\">{{lk.name}}</menu-item></split-button></p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><strong class=\"pl-k\">'bs-style'</strong>：颜色</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-splitbutton\"><template>\n  <split-button title='分裂框' v-bind:dropdown='true' bs-style='primary'>\n    <menu-item v-bind:href='#'>\n      link1\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link2\n    </menu-item>\n    <menu-item v-bind:href='#'>\n      link3\n    </menu-item>\n  </split-button>\n</template></textarea></p></div></div></panel><h3 id=\"vbs-alert\">警告框-Alert</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><alert bs-style=\"warning\">这是警告框</alert><alert bs-style=\"success\">这是成功提示框</alert></p><p><strong class=\"pl-k\">'bs-style'</strong>：颜色</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-alert\"><template>\n  <alert bs-style='warning'>\n      这是警告框\n  </alert>\n  <alert bs-style='success'>\n      这是成功提示框\n  </alert>\n</template>\n</textarea></p></div></div></panel><h3 id=\"vbs-modal\">模态框－Modal</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><button @click=\"toggleModal\" bs-style=\"primary\">运行模态框</button></p><modal v-bind:show.sync=\"showModal\"><div slot=\"modal-header\"><span type=\"button\" aria-label=\"close\" @click=\"closeModal\" class=\"close\"><span aria-hidden=\"true\">&times;</span></span><h4 class=\"modal-title\"> title</h4></div><div slot=\"modal-body\">内容。。</div><div slot=\"modal-footer\"><button @click=\"closeModal\">close</button></div></modal><p><strong class=\"pl-k\">'show'</strong>：bool值</p><p><strong class=\"pl-k\">'bs-size'</strong>：尺寸</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-modal\"><template>\n  <modal v-bind:show.sync='showModal'>\n    <div slot='modal-header'>\n        <span class='close' type='button' aria-label='close' @click='closeModal'>\n          <span aria-hidden=\"true\">&times;</span>\n        </span>\n        <h4>\n          title\n        </h4>\n    </div>\n    <div slot='modal-body'>\n        content\n    </div>\n    <div slot='modal-footer'>\n        <button @click='closeModal'>close</button>\n    </div>\n  </modal>\n\n</template>\n<script>\n  export default{\n    data(){\n      return {\n        showModal:false\n      }\n    },\n    methods:{\n      closeModal(){\n        this.showModal = !this.showModal;\n      }\n    }\n  }\n</script></textarea></p></div></div></panel><h3 id=\"vbs-tooltip\">Tooltip</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><div v-bind:style=\"tooltipStyle\"><tooltip placement=\"bottom\" v-bind:show=\"true\">tobottom</tooltip></div></p><p><strong class=\"pl-k\">'placement'</strong>：位置(top,left,bottom,right)</p><p><strong class=\"pl-k\">'show'</strong>：bool值，是否显示</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-tooltip\"><template>\n  <tooltip placement='bottom' v-bind:show='true'>\n    提示按钮\n  </tooltip>\n</template></textarea></p></div></div></panel><h3>TooltipTrigger</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><tooltip-trigger trigger=\"click\" placement=\"bottom\" content=\"this is content\"><button bs-style=\"danger\">提示框</button></tooltip-trigger></p><p><strong class=\"pl-k\">'placement'</strong>：位置(top,left,bottom,right)</p><p><strong class=\"pl-k\">'trigger'</strong>：触发类型(hover,click)</p><p><strong class=\"pl-k\">'content'</strong>：提示内容</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-tooltiptrigger\"><template>\n  <tooltip-trigger\n    trigger='click'\n    placement='bottom'\n    content=\"this is content\"\n    >\n    <button bs-style='success'>提示框按钮</button>\n  </tooltip-trigger>\n</template></textarea></p></div></div></panel><h3>弹出提示框－Popover</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><div v-bind:style=\"popoverStyle\"><popover title=\"标题\" placement=\"top\" v-bind:show=\"true\">弹出框内容呢弹出框内容呢弹出框内容呢</popover></div></p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-popover\"><template>\n  <popover\n    title='标题'\n    placement='bottom'\n    v-bind:show='true'>\n    提示按钮\n  </popover>\n</template></textarea></p></div></div></panel><h3>弹出提示框－PopoverTrigger</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><popover-trigger trigger=\"click\" placement=\"left\" title=\"标题\" content=\"thisis conent\"><button bs-style=\"default\">popover弹出来</button></popover-trigger></p><p><strong class=\"pl-k\">'placement'</strong>：位置(top,left,bottom,right)</p><p><strong class=\"pl-k\">'trigger'</strong>：触发类型(hover,click)</p><p><strong class=\"pl-k\">'content'</strong>：提示内容</p><p><strong class=\"pl-k\">'title'</strong>：标题</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-popovertrigger\"><template>\n  <popover-trigger\n    trigger='click'\n    placement='left'\n    title='标题'\n    content=\"this is content\"\n    >\n    <button bs-style='info'>提示框按钮</button>\n  </popover-trigger>\n</template></textarea></p></div></div></panel><h3 id=\"vbs-tab\">选项卡－Tab</h3><panel><div slot=\"panel-header\">说明，tab，tab-item</div><div slot=\"panel-body\"><div><p><tab v-bind:on-select=\"clickTab\"><tab-item title=\"tab1\">tab1-content</tab-item><tab-item title=\"tab2\">tab2-content</tab-item><tab-item title=\"tab3\" v-bind:disabled=\"true\">tab3-content</tab-item></tab></p><p><strong class=\"pl-k\">'on-select'</strong>：选择事件回调</p><p><strong class=\"pl-k\">'title'</strong>：选项卡标题</p><p><strong class=\"pl-k\">'disabled'</strong>：bool值，是否可以选中</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-tab\"><template>\n  <tab v-bind:on-select='clickTab'>\n    <tab-item title='tab1'>\n      tab1 content\n    </tab-item>\n    <tab-item title='tab2'>\n      tab2 content\n    </tab-item>\n    <tab-item title='tab3' v-bind:disabled='true'>\n      tab3 content\n    </tab-item>\n  </tab>\n</template>\n<script>\n  export default{\n    methods:{\n      clickTab(tabItem){\n          alert(tabItem.title);\n      }\n    }\n  }\n</script></textarea></p></div></div></panel><h3 id=\"vbs-pagination\">分页组件－Pagination</h3><panel><div slot=\"panel-header\">说明,pager</div><div slot=\"panel-body\"><div><p><pagination v-bind:active-page=\"6\" v-bind:items=\"10\" v-bind:on-select=\"selectPage\"></pagination></p><p><strong class=\"pl-k\">'active-page'</strong>：当前页</p><p><strong class=\"pl-k\">'items'</strong>：页数</p><p><strong class=\"pl-k\">'on-select'</strong>：页选中事件回调,返回pager类(包含val，name，active，disabled)</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-pagination\"><template>\n  <pagination\n    v-bind:active-page='6'\n    v-bind:items='10'\n    v-bind:on-select='selectPage'>\n\n  </pagination>\n</template>\n<script>\n  export default{\n    methods:{\n      selectPage(pager){\n          //pager.disabled,pager.active\n          alert(pager.name);\n      }\n    }\n  }\n</script></textarea></p></div></div></panel><h3 id=\"vbs-row\">栅格－Row,Column</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><p><row><column xs=\"12\" sm=\"4\" md=\"4\">栅格系统1</column><column xs=\"12\" sm=\"4\" md=\"4\">栅格系统2</column><column xs=\"12\" sm=\"4\" md=\"4\">栅格系统3</column></row></p><p><strong class=\"pl-k\">'xs'</strong>：数字类型</p><p><strong class=\"pl-k\">'sm'</strong>：数字类型</p><p><strong class=\"pl-k\">'md'</strong>：数字类型</p><p><strong class=\"pl-k\">'lg'</strong>：数字类型</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-rowcol\"><template>\n  <row>\n    <column xs='12' sm='4' md='4' lg='4'>\n      栅格系统1\n    </column>\n    <column xs='12' sm='4' md='4' lg='4'>\n      栅格系统2\n    </column>\n    <column xs='12' sm='4' md='4' lg='4'>\n      栅格系统3\n    </column>\n  </row>\n</template></textarea></p></div></div></panel><h3 id=\"vbs-panel\">面板－panel</h3><panel><div slot=\"panel-header\">标题</div><div slot=\"panel-body\"><p>内容</p><p><strong class=\"pl-k\">'slot=panel-header'</strong>：标题部分</p><p><strong class=\"pl-k\">'slot=panel-body'</strong>：内容部分</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-panel\"><template>\n  <panel  bs-style='info'>\n    <div slot='panel-header'>\n        标题\n    </div>\n    <div slot='panel-body'>\n        内容\n    </div>\n  </panel>\n</template></textarea></p></div></panel><h3 id=\"vbs-carousel\">跑马灯－Carousel</h3><panel><div slot=\"panel-header\">说明，carousel，carousel-item</div><div slot=\"panel-body\"><p><carousel style=\"width:650px;\"><carousel-item><img src=\"" + __webpack_require__(151) + "\"/></carousel-item><carousel-item><img src=\"" + __webpack_require__(151) + "\"/></carousel-item><carousel-item><img src=\"" + __webpack_require__(151) + "\"/></carousel-item></carousel></p><p><strong class=\"pl-k\">'interval'</strong>：数字：3000（默认3秒），间隔时间</p><p><strong class=\"pl-k\">'controls'</strong>：bool值，控制上下滚动点击事件</p><p><strong class=\"pl-k\">'indicators'</strong>：bool值，显示锚点</p><p><strong class=\"pl-k\">'pause-on-hover'</strong>：bool值，鼠标悬停暂停滚动</p><p><strong class=\"pl-k\">'slide'</strong>：bool值，自动滚动</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-carousel\"><template>\n  <carousel\n  interval='5000'\n  v-bind:controls='true',\n  v-bind:slide='true'\n  >\n    <carousel-item>\n      <img src='" + __webpack_require__(151) + "' alt='' />\n    </carousel-item>\n    <carousel-item>\n      <img src='" + __webpack_require__(151) + "' alt='' />\n    </carousel-item>\n    <carousel-item>\n      <img src='" + __webpack_require__(151) + "' alt='' />\n    </carousel-item>\n  </carousel>\n</template>\n</textarea></p></div></panel><h3 id=\"vbs-form\">表单－Form</h3><panel><div slot=\"panel-header\">说明，form,form-input</div><div slot=\"panel-body\"><p><form is=\"form\" bs-style=\"horizontal\" v-bind:layout=\"{sm:&quot;3,9&quot;,md:&quot;2,8&quot;}\"><form-input label=\"输入框1\" placeholder=\"输入框12\" v-bind:model.sync=\"value\"></form-input></form></p><p>{{value}}</p><p><strong class=\"pl-ent\">form</strong></p><p><strong class=\"pl-k\">'bs-style'</strong>：布局类型,horizontal,inline</p><p><strong class=\"pl-k\">'layout'</strong>：布局类型为horizontal时，分配sm，md大小，例如：md='2-10',sm='3-9'</p><p><strong class=\"pl-ent\">form-input</strong></p><p><strong class=\"pl-k\">'label'</strong>：Label内容</p><p><strong class=\"pl-k\">'placeholder'</strong>：placeholder提示语</p><p><strong class=\"pl-k\">'model'</strong>：双向绑定关键字</p><p><button @click=\"toggleSource\">示例源码</button></p><p><textarea name=\"example-code-form\"><template id=\"\">\n  <form\n    is='form'\n    bs-style='horizontal'\n    v-bind:layout='{sm:\"3,9\",md:\"2,8\"}'\n    >\n      <form-input\n        type='text'\n        label='输入框1'\n        placeholder='输入框12'\n        v-bind:model.sync='value'\n        >\n\n      </form-input>\n  </form>\n</template>\n<script>\n  export default{\n    data(){\n      return{\n        value:\"text\"\n      }\n    }\n  }\n</script></textarea></p></div></panel><h3 id=\"vbs-breadcrumb\">面包屑－Breadcrumb</h3><panel><div slot=\"panel-header\">说明，breadcrumb,breadcrumb-item</div><div slot=\"panel-body\"><p><breadcrumb><breadcrumb-item href=\"#\">home</breadcrumb-item><breadcrumb-item href=\"#\">library</breadcrumb-item><breadcrumb-item v-bind:active=\"true\">point</breadcrumb-item></breadcrumb></p><p><strong class=\"pl-ent\">breadcrumb-item</strong></p><p><strong class=\"pl-k\">'href'</strong>：链接地址</p><p><strong class=\"pl-k\">'active'</strong>：bool值，当前所在页</p><p><textarea name=\"example-code-breadcrumb\"><template>\n  <breadcrumb>\n    <breadcrumb-item href='#'>\n      home\n    </breadcrumb-item>\n    <breadcrumb-item href='#'>\n      library\n    </breadcrumb-item>\n    <breadcrumb-item v-bind:active='true'>\n      point\n    </breadcrumb-item>\n  </breadcrumb>\n</template></textarea></p></div></panel><h3 id=\"vbs-thumbnail\">缩略图－Thumbnail</h3><panel><div slot=\"panel-header\">说明，thumbnail内部可包含h3标题，p标签描述信息和按钮组</div><div slot=\"panel-body\"><row><column md=\"4\" sm=\"12\"><thumbnail href=\"#\" src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+\" alt=\"示例图\"><h3>标题</h3><p>描述信息在这里</p><p><button bs-style=\"primary\">按钮</button><button>按钮</button></p></thumbnail></column><column md=\"4\" sm=\"12\"><thumbnail src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+\" alt=\"示例图\"><h3>标题</h3><p>描述信息在这里</p><p><button bs-style=\"primary\">按钮</button><button>按钮</button></p></thumbnail></column><column md=\"4\" sm=\"12\"><thumbnail src=\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+\" alt=\"示例图\"><h3>标题</h3><p>描述信息在这里</p><p><button bs-style=\"primary\">按钮</button><button>按钮</button></p></thumbnail></column></row><p><strong class=\"pl-k\">'href'</strong>：链接地址</p><p><strong class=\"pl-k\">'target'</strong>：目标项</p><p><strong class=\"pl-k\">'src'</strong>：图片地址</p><p><strong class=\"pl-k\">'alt'</strong>：图片标注信息</p><p><textarea name=\"example-code-thumbnail\"><template>\n  <row>\n    <column md='4' sm='12'>\n      <thumbnail\n      src='http://',\n      alt='image',\n      href='url',\n      target='_blank'\n      >\n      <h3>title</h3>\n      <p>content</p>\n      <p>\n        <button bs-style='pimary'>按钮</button>\n        <button>按钮</button>\n      </p>\n      </thumbnail>\n    </column>\n    <column md='4' sm='12'>\n      <thumbnail\n      src='http://',\n      alt='image',\n      href='url',\n      target='_blank'\n      >\n      <h3>title</h3>\n      <p>content</p>\n      <p>\n        <button bs-style='pimary'>按钮</button>\n        <button>按钮</button>\n      </p>\n      </thumbnail>\n    </column>\n    <column md='4' sm='12'>\n      <thumbnail\n      src='http://',\n      alt='image',\n      href='url',\n      target='_blank'\n      >\n      <h3>title</h3>\n      <p>content</p>\n      <p>\n        <button bs-style='pimary'>按钮</button>\n        <button>按钮</button>\n      </p>\n      </thumbnail>\n    </column>\n  </row>\n</template></textarea></p></div></panel><h3 id=\"vbs-progressbar\">进度条－Progressbar</h3><panel><div slot=\"panel-header\">说明</div><div slot=\"panel-body\"><div><progressbar v-bind:progress=\"progress\" bs-style=\"danger\" v-bind:striped=\"true\" v-bind:animation=\"true\">{{progress}}</progressbar><button @click=\"addProgress\">进度变化点击我</button></div><p><strong class=\"pl-k\">'progress'</strong>：Number类型，当前进度数</p><p><strong class=\"pl-k\">'min'</strong>：Number类型，最小值，默认：0</p><p><strong class=\"pl-k\">'max'</strong>：Number类型，最大值，默认：100</p><p><strong class=\"pl-k\">'bs-style'</strong>：样式类型</p><p><strong class=\"pl-k\">'striped'</strong>：bool类型，条纹状</p><p><strong class=\"pl-k\">'animation'</strong>：bool类型，条纹动画效果</p><p><textarea name=\"example-code-progressbar\"><template>\n  <progressbar\n  v-bind:progress='progress'\n  bs-style='danger'\n  v-bind:striped='true'\n  v-bind:animation='true'>\n    {&nbsp;{progress}&nbsp;}\n  </progressbar>\n</template></textarea></p></div></panel>";
+
+/***/ },
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "carousel1.png?a56f1b44a9ee72695530806d02b23d4f";

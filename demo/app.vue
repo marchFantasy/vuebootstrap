@@ -46,13 +46,13 @@ div.container
     div(v-bind:style="tooltipStyle")
       tooltip(placement='bottom',v-bind:show='true') tobottom
     h4 tooltip 按钮
-    tooltip-trigger(trigger='click',placement='right',content="12312312321312")
+    tooltip-trigger(trigger='click',placement='bottom',content="弹出框内容呢弹出框内容呢弹出框内容呢")
       button(bs-style='danger') 提示框
     h4 popver弹出框
     div(v-bind:style='popoverStyle')
       popover(title='标题',placement='top',v-bind:show='true')
         弹出框内容呢弹出框内容呢弹出框内容呢
-    popover-trigger(trigger='click',placement='right',title='title',content="撒大家快乐啊圣诞节快乐的撒娇哭\n手机打开")
+    popover-trigger(trigger='click',placement='right',title='title',content="啊圣诞节快乐家")
       button(bs-style='default') popover弹出来
     h4 选项卡
     tab(v-bind:on-select='clickTab')
@@ -88,6 +88,47 @@ div.container
     form(is='form',bs-style='horizontal',v-bind:layout='{sm:"3,9",md:"2,8"}')
       form-input(type=text,label='输入框1',placeholder='输入框12',v-bind:model.sync='value')
     {{value}}
+    h4 面包屑
+    breadcrumb
+      breadcrumb-item(href='#').
+        home
+      breadcrumb-item(href='#').
+        library
+      breadcrumb-item(v-bind:active='true').
+        point
+    h4 缩略图
+    row
+      column(md='3',sm='12')
+        thumbnail(
+                src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+',
+                alt='示例图')
+                h3 标题
+                p 描述信息在这里
+                p
+                  button(bs-style='primary') 按钮
+                  button 按钮
+      column(md='3',sm='12')
+        thumbnail(
+                src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+',
+                alt='示例图')
+                h3 标题
+                p 描述信息在这里
+                p
+                  button(bs-style='primary') 按钮
+                  button 按钮
+      column(md='3',sm='12')
+        thumbnail(
+                src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQyIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDI0MiAyMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MjAwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUxODA4Yjk1MDQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTE4MDhiOTUwNCI+PHJlY3Qgd2lkdGg9IjI0MiIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI4OS44NTkzNzUiIHk9IjEwNS40Ij4yNDJ4MjAwPC90ZXh0PjwvZz48L2c+PC9zdmc+',
+                alt='示例图')
+                h3 标题
+                p 描述信息在这里
+                p
+                  button(bs-style='primary') 按钮
+                  button 按钮
+    h4 进度条
+    Progressbar(v-bind:progress='progress',bs-style='danger',v-bind:striped='true')
+      {{progress}}
+    button(@click='addProgress') 进度变化点击我
 </template>
 <script>
 import Label from '../src/label.vue';
@@ -118,6 +159,10 @@ import CarouselItem from '../src/carouselItem.vue';
 import Form from '../src/form.vue';
 import FormInput from '../src/formInput.vue';
 
+import Breadcrumb from '../src/breadcrumb.vue';
+import BreadcrumbItem from '../src/breadcrumbItem.vue';
+import Thumbnail from '../src/thumbnail.vue';
+import Progressbar from '../src/progressbar.vue';
 export default{
     data(){
       return {
@@ -127,7 +172,8 @@ export default{
         popoverStyle:{position:'relative',height:'100px'},
         styleList:['default',"primary","success","info","warning","danger"],
         linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}],
-        value:"form1"
+        value:"form1",
+        progress:12
       }
     },
     methods:{
@@ -148,6 +194,9 @@ export default{
       },
       clickTab(tab){
         alert(tab.title)
+      },
+      addProgress(){
+        this.progress += 2;
       }
     },
     components:{
@@ -172,7 +221,11 @@ export default{
       Form,
       FormInput,
       Popover,
-      PopoverTrigger
+      PopoverTrigger,
+      Breadcrumb,
+      BreadcrumbItem,
+      Thumbnail,
+      Progressbar
     }
 
 

@@ -24,6 +24,10 @@ import Tab from './src/tab.vue';
 import TabItem from './src/tabItem.vue';
 import Tooltip from './src/tooltip.vue';
 import TooltipTrigger from './src/tooltipTrigger.vue';
+import Breadcrumb from './src/breadcrumb.vue';
+import BreadcrumbItem from './src/breadcrumbItem.vue';
+import Thumbnail from './src/thumbnail.vue';
+import Progressbar from './src/progressbar.vue';
 export default{
   Alert,
   Anchor,
@@ -49,6 +53,10 @@ export default{
   Tab,
   TabItem,
   Tooltip,
-  TooltipTrigger
+  TooltipTrigger,
+  Breadcrumb,
+  BreadcrumbItem,
+  Thumbnail,
+  Progressbar
 }
 </script>

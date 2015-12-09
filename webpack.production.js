@@ -9,7 +9,7 @@ module.exports = {
     publicPath: 'production/',
     filename: '[name].min.js',
     library: 'vuebootstrap',
-    libraryTarget: 'commonjs2'
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
@@ -36,7 +36,11 @@ module.exports = {
     plugins: ['transform-runtime']
   },
   plugins:[
-
+    new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: false,
       compress: {

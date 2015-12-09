@@ -19,7 +19,7 @@ module.exports = {
       this.classes.push(this.tag);
     }
     if(this.show){
-      Array.prototype.push.apply(this.classes,[this.placement,'fade','in']);
+      Array.prototype.push.apply(this.classes,[this.placement,'fade','in','show']);
     }
   },
   computed:{
@@ -39,6 +39,16 @@ module.exports = {
     animateIn:function(){
       this.classes.push(this.placement);
       this.classes.push('in');
+    }
+  },
+  watch:{
+    show(nw,od){
+      if(!nw){
+        this.classes.splice(1);
+      }
+      if(nw){
+        this.classes.push('show');
+      }
     }
   }
 }

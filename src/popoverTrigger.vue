@@ -6,13 +6,13 @@
 <template lang='jade'>
 div.popover-wrap
   slot
-  popover(
-    v-if='show',
-    v-ref:popover,
-    v-bind:title='title'
-    v-bind:style='tipPosition',
-    v-bind:placement='placement',
-    ) {{content}}
+popover(
+  v-ref:popover,
+  v-bind:title='title'
+  v-bind:style='tipPosition',
+  v-bind:placement='placement',
+  v-bind:show='show',
+  ) {{content}}
 </template>
 <script>
 /**

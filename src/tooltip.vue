@@ -1,8 +1,7 @@
-/**
- * tooltip
- * tag:Tooltip
- * @param placement 位置
- */
+<style lang='stylus'>
+.tooltip
+  display:none
+</style>
 <template lang="jade">
 div(v-bind:class='classes',role='tooltip')
   div.tooltip-arrow
@@ -11,6 +10,12 @@ div(v-bind:class='classes',role='tooltip')
 </template>
 
 <script>
+/**
+ * tooltip
+ * tag:Tooltip
+ * @param placement 位置
+ * @param show 显示
+ */
 import TipMixin from './mixin/poptipMixin.js';
 export default {
   mixins:[TipMixin],

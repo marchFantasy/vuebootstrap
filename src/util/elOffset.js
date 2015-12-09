@@ -11,8 +11,17 @@ ElOffset.prototype = {
   },
   getPosition:function(){
     if(!this.el)return;
-    if('getClientRects' in this.el){
-      return this.el.getClientRects()[0];
+    if('getBoundingClientRect' in this.el){
+      var clientRect = this.el.getBoundingClientRect();
+
+      return {
+        top:clientRect.top + window.scrollY,
+        left:clientRect.left,
+        right:clientRect.right,
+        bottom:clientRect.bottom,
+        width:clientRect.width,
+        height:clientRect.height
+      };
     }
     return{
       height:this.el.offsetHeight,
@@ -25,7 +34,7 @@ ElOffset.prototype = {
   }
 };
 
-var getOffsetLeft = function(){
+var getOffsetLeft = function(obj){
   var   l=obj.offsetLeft;
   while(obj.offsetParent != null){
      obj = obj.offsetParent;
@@ -33,7 +42,7 @@ var getOffsetLeft = function(){
   }
   return l;
 }
-var getOffsetTop = function(){
+var getOffsetTop = function(obj){
   var   l=obj.offsetTop;
   while(obj.offsetParent != null){
      obj = obj.offsetParent;
@@ -41,7 +50,7 @@ var getOffsetTop = function(){
   }
   return l;
 }
-var getOffsetRight = function(){
+var getOffsetRight = function(obj){
   var   l=obj.offsetRight;
   while(obj.offsetParent != null){
      obj = obj.offsetParent;
@@ -49,7 +58,7 @@ var getOffsetRight = function(){
   }
   return l;
 }
-var getOffsetBottom = function(){
+var getOffsetBottom = function(obj){
   var   l=obj.offsetBottom;
   while(obj.offsetParent != null){
      obj = obj.offsetParent;

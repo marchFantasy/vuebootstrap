@@ -23,7 +23,7 @@ module.exports = {
     }
   },
   ready:function(){
-    var btnEl = this.$children[0].$el;
+    var btnEl = this.$children[1].$el;
 
     //动态绑定事件
     switch(this.trigger){
@@ -47,13 +47,14 @@ module.exports = {
       //等tooltip出现在dom以后才能获取
       Vue.nextTick(function(){
         if(self.show){
-          var vButton = self.$children[0];
+          var vButton = self.$children[1];
           var vTooltip = self.$refs[self.tag] || self.$children[1];
 
           var btnElset = new elOffset(vButton.$el);
           var btnElPosition = btnElset.getPosition();
 
           vTooltip.fadeIn();
+
           var tipElset = new elOffset(vTooltip.$el);
           var tipElPosition = tipElset.getPosition();
 
@@ -69,17 +70,17 @@ module.exports = {
 
 
           self.tipPosition = self.placement === 'top' ? {
-            left: Math.round((btnElPosition.width-tipElPosition.width)/2)+'px',
-            top:-(btnElPosition.height)+'px'
+            left: Math.round(btnElPosition.left-Math.abs(tipElPosition.width-btnElPosition.width)/2)+'px',
+            top:btnElPosition.top-btnElPosition.height+'px'
           }:self.placement === 'bottom' ? {
-            left:Math.round((btnElPosition.width-tipElPosition.width)/2)+'px',
-            top:btnElPosition.height+'px'
+            left:Math.round(btnElPosition.left-Math.abs(tipElPosition.width-btnElPosition.width)/2)+'px',
+            top:btnElPosition.top+btnElPosition.height+'px'
           }:self.placement === 'left' ? {
-            left:-Math.round(tipElPosition.width)+'px',
-            top:Math.round((btnElPosition.height-tipElPosition.height)/2)+'px',
+            left:Math.abs(btnElPosition.left-tipElPosition.width)+'px',
+            top:Math.round(btnElPosition.top+(btnElPosition.height-tipElPosition.height)/2)+'px',
           }:{
-            left:Math.round(btnElPosition.width)+'px',
-            top:Math.round((btnElPosition.height-tipElPosition.height)/2)+'px',
+            left:btnElPosition.left+tipElPosition.width+'px',
+            top:Math.round(btnElPosition.top+(btnElPosition.height-tipElPosition.height)/2)+'px',
           }
 
           vTooltip.animateIn();

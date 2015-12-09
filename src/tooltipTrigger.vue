@@ -7,12 +7,12 @@
 <template lang="jade">
 div.tooltip-wrap
   slot
-  tooltip(
-    v-if='show',
-    v-ref:tooltip,
-    v-bind:style='tipPosition',
-    v-bind:placement='placement',
-    ) {{content}}
+tooltip(
+  v-ref:tooltip,
+  v-bind:style='tipPosition',
+  v-bind:placement='placement',
+  v-bind:show='show'
+  ) {{content}}
 </template>
 <script>
 /**

@@ -2,14 +2,14 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'vuebootstrap':'./main.js'
+    'vuebootstrap':'./index.js'
   },
   output: {
     path: './production',
     publicPath: 'production/',
     filename: '[name].min.js',
-    library: 'Vuebootsrap',
-    libraryTarget: 'umd'
+    library: 'vuebootstrap',
+    libraryTarget: 'commonjs2'
   },
   module: {
     loaders: [
@@ -19,7 +19,7 @@ module.exports = {
       },
       {
       	test: /\.js$/,
-        exclude: /node_modules|vue\/src|vue-router\/|vue-loader\/|vue-hot-reload-api\//,
+        exclude: /node_modules/,
       	loader: 'babel'
       },
       {
@@ -32,16 +32,13 @@ module.exports = {
   // example: if you wish to apply custom babel options
   // instead of using vue-loader's default:
   babel: {
-    presets: ['es2015', 'stage-0'],
+    presets: ['es2015','stage-0'],
     plugins: ['transform-runtime']
   },
   plugins:[
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
+
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: false,
       compress: {
         warnings: false
       }

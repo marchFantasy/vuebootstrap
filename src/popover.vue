@@ -1,7 +1,3 @@
-<style lang='stylus'>
-  .popover
-    display:block
-</style>
 <template lang='jade'>
 div(v-bind:class='classes',role='tooltip')
   div.arrow(v-bind:style='arrowStyle')

@@ -1,6 +1,6 @@
 {
   "name": "vuebootstrap",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "vue-loader,vue,jade,stylus,webpack",
   "main": "./production/vuebootstrap.min.js",
   "scripts": {

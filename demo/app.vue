@@ -60,7 +60,7 @@ div.container
       tab-item(title='tab2') 456
       tab-item(title='tab3',v-bind:disabled='true') 789
     h4 分页组件
-    pagination(v-bind:active-page=6,v-bind:items=10,v-bind:on-select='selectPage')
+    pagination(v-bind:active-page='activePage ',v-bind:items=10,v-bind:on-select='selectPage')
     h4 栅格
     row
       column(xs='12',sm='4',md='4') 栅格系统1
@@ -173,7 +173,8 @@ export default{
         styleList:['default',"primary","success","info","warning","danger"],
         linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}],
         value:"form1",
-        progress:12
+        progress:12,
+        activePage:6
       }
     },
     methods:{
@@ -190,7 +191,14 @@ export default{
         this.toggleModal();
       },
       selectPage(pager){
-        alert(pager.name);
+        //alert(pager.name);
+        if(pager.num == "next"){
+          this.activePage = 10 >= (this.activePage+1) ? this.activePage+1:this.activePage;
+        }else if(pager.num == "prev"){
+          this.activePage = this.activePage < 1 ? this.activePage : this.activePage - 1;
+        }else{
+          this.activePage = pager.num;
+        }
       },
       clickTab(tab){
         alert(tab.title)

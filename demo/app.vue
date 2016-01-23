@@ -1,12 +1,4 @@
-/**
- * label
- * tag:VLabel
- * @type {String}
- * @description
- * 可以添加跳转链接，自动转换a标签
- * 不能使用系统已存在的label标签调用，否则不会成功，默认情况请使用：
- * import VLabel from 'label.vue';
- */
+
 <style lang="stylus">
 .label
   a
@@ -32,7 +24,8 @@ div.container
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
     h4 模态框
     button(@click='toggleModal',bs-style='warning') 运行模态框
-    modal(v-bind:show.sync='showModal')
+    //v-bind:on-before-hide="beforeClose"
+    modal(v-bind:is-show='showModal',v-bind:on-before-hide="beforeClose")
       div(slot='modal-header')
         span.close(type='button',aria-label='close',@click='closeModal')
           span(aria-hidden="true")
@@ -131,6 +124,10 @@ div.container
     button(@click='addProgress') 进度变化点击我
 </template>
 <script>
+/**
+ * app.vue 示例代码
+ * 可以查看源码，基本了解控件的运用
+ */
 import Label from '../src/label.vue';
 import Button from '../src/button.vue';
 import ButtonGroup from '../src/buttonGroup.vue';

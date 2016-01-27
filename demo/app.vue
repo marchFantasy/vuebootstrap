@@ -18,7 +18,7 @@ div.container
       button center
       button right
     h4 下拉框
-    dropdown-button(title='下拉框',v-bind:dropup='true')
+    dropdown-button(title='下拉框',v-bind:dropup='true',v-bind:is-show="isShow")
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
     split-button(title='分裂下拉按钮',bs-style='primary',v-on:click='clickButton')
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
@@ -202,6 +202,13 @@ export default{
       },
       addProgress(){
         this.progress += 2;
+      },
+      isShow(isShow){
+        if(isShow){
+          alert("open")
+        }else{
+          alert("hide");
+        }
       }
     },
     components:{

@@ -5,7 +5,7 @@
 var ButtonGroup = require('../buttonGroup.vue');
 var Button = require('../button.vue');
 var ButtonMixin = require('./buttonMixin.js');
-
+var _ = require('vue').util;
 module.exports = {
   mixins:[ButtonMixin],
   props:{
@@ -20,9 +20,13 @@ module.exports = {
     dropdown:{
       type:Boolean,
       default:true
+    },
+    isShow:{
+      type:Function
     }
   },
   created(){
+
     if(this.dropup){
       this.classes['dropup'] = true;
     }
@@ -30,6 +34,18 @@ module.exports = {
       this.classes['dropdown'] = false;
     }
 
+  },
+  ready(){
+    let self = this;
+    //失去焦点后隐藏
+    _.on(window,"click",(e)=>{
+      if(self.open && !e.target.hasAttribute("data-toggle")){
+        self.toggleOpen();
+      }
+    });
+  },
+  beforeDestroy(){
+    _.off(window,"click");
   },
   data(){
     return{
@@ -39,9 +55,14 @@ module.exports = {
   },
   methods:{
     toggleOpen(e){
+      if(e)e.preventDefault();
       this.open = !this.open;
       this.classes['open'] = this.open;
-    }
+      if(this.isShow){
+        this.isShow(this.open);
+      }
+    },
+
   },
   components:{
     Button,

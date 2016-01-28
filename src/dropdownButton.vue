@@ -15,7 +15,7 @@ button-group(@click='toggleOpen',v-bind:class='classes')
   button(class='dropdown-toggle',v-bind:bs-style='bsStyle',v-bind:bs-size='size',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false')
     slot(name="dropdown-title")
   ul.dropdown-menu
-    slot
+    slot(name="dropdown-menu")
 </template>
 <script>
 

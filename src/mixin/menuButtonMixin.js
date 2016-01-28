@@ -9,10 +9,6 @@ var _ = require('vue').util;
 module.exports = {
   mixins:[ButtonMixin],
   props:{
-    title:{
-      type:String,
-      required:true
-    },
     dropup:{
       type:Boolean,
       default:false
@@ -39,7 +35,7 @@ module.exports = {
     let self = this;
     //失去焦点后隐藏
     _.on(window,"click",(e)=>{
-      if(self.open && !e.target.hasAttribute("data-toggle")){
+      if(self.open && !self.$el.nextSibling.contains(e.target)){
         self.toggleOpen();
       }
     });

@@ -18,7 +18,10 @@ div.container
       button center
       button right
     h4 下拉框
-    dropdown-button(title='下拉框',v-bind:dropup='true',v-bind:is-show="isShow")
+    dropdown-button(v-bind:dropup='true',v-bind:is-show="isShow")
+      span(slot="dropdown-title")
+        | 下拉框
+        i.caret
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
     split-button(title='分裂下拉按钮',bs-style='primary',v-on:click='clickButton')
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}

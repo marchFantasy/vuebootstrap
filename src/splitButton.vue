@@ -21,6 +21,12 @@ button-group(v-bind:class='classes')
 import MenuButtonMixin from './mixin/menuButtonMixin.js';
 export default{
   mixins:[MenuButtonMixin],
+  props:{
+    title:{
+      type:String,
+      required:true
+    }
+  },
   methods:{
     _handleClick(e){
       this.$dispatch('click',e);

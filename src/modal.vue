@@ -36,7 +36,7 @@ div.modal.fade(v-bind:class='modalClasses')
         type:String,
         required:true
       },
-      size:{
+      bsSize:{
         type:String
       },
       isShow:{

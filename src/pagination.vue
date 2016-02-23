@@ -86,7 +86,10 @@ ul(v-bind:class='classes')
       }
     },
     created(){
-      this.renderPageNums();
+      if(this.items){
+        this.renderPageNums();
+      }
+
     },
     methods:{
       createPagerInstance(name,num,isActive=false,disabled=false){
@@ -177,6 +180,11 @@ ul(v-bind:class='classes')
     watch:{
       activePage(_nextPage,_prevPage){
           this.renderPageNums();
+      },
+      items(nums){
+        if(nums){
+          this.renderPageNums();
+        }
       }
     },
     components:{

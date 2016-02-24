@@ -28,7 +28,7 @@ div.container
     h4 模态框
     button(@click='toggleModal',bs-style='warning') 运行模态框
     //v-bind:on-before-hide="beforeClose"
-    modal(v-bind:is-show='showModal',v-bind:on-before-hide="beforeClose")
+    modal(v-bind:is-show='showModal',bs-size="lg",v-bind:on-before-hide="beforeClose")
       div(slot='modal-header')
         span.close(type='button',aria-label='close',@click='closeModal')
           span(aria-hidden="true")

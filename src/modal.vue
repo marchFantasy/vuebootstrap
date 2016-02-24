@@ -64,7 +64,7 @@ div.modal.fade(v-bind:class='modalClasses')
     },
     computed:{
       bSize(){
-        return this.size || null;
+        return this.bsSize || null;
       }
     },
     watch:{

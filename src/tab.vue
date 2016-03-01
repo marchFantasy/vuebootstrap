@@ -24,8 +24,7 @@ import TabItem from './tabItem.vue';
 export default {
   props:{
     onSelect:{
-      type:Function,
-      twoWay:true
+      type:Function
     }
   },
   data(){

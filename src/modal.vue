@@ -18,7 +18,6 @@ div.modal.fade(v-bind:class='modalClasses')
 <script>
 /**
  * 模态框组件
- * @param title  标题
  * @param show  显示/隐藏
  * @param backdrop 包含遮盖层
  * @param size  大小
@@ -32,10 +31,6 @@ div.modal.fade(v-bind:class='modalClasses')
   import Overlay from './overlay.vue';
   const Modal = {
     props:{
-      title:{
-        type:String,
-        required:true
-      },
       bsSize:{
         type:String
       },

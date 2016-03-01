@@ -10,9 +10,19 @@
 
 <template lang="jade">
 button-group(v-bind:class='classes')
-  button(v-bind:bs-style='bsStyle',v-bind:size='size',@click='_handleClick')
+  button(v-bind:bs-style='bsStyle',
+        v-bind:bs-size='bsSize',
+        @click='_handleClick',
+        v-bind:disabled='disabled')
     {{title}}
-  button(@click='toggleOpen',class='dropdown-toggle',v-bind:bs-style='bsStyle',v-bind:size='size',data-toggle='dropdown',aria-haspopup='true',aria-expanded='false')
+  button(@click='toggleOpen',
+          class='dropdown-toggle',
+          v-bind:bs-style='bsStyle',
+          v-bind:bs-size='bsSize',
+          v-bind:disabled='disabled',
+          data-toggle='dropdown',
+          aria-haspopup='true',
+          aria-expanded='false')
     span.caret
   ul.dropdown-menu
     slot

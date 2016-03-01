@@ -5,7 +5,7 @@ module.exports = {
   props:{
     'href':{
       type:String,
-      default:null
+      default:'javascript:;'
     },
     'target':{
       type:String,

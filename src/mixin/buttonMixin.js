@@ -8,8 +8,9 @@ module.exports = {
       type:String,
       default:"default"
     },
-    'size':{
-      type:String
+    'bsSize':{
+      type:String,
+      default:''
     }
   }
 }

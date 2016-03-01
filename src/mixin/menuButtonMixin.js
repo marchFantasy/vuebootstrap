@@ -19,6 +19,10 @@ module.exports = {
     },
     isShow:{
       type:Function
+    },
+    disabled:{
+      type:Boolean,
+      default:false
     }
   },
   created(){
@@ -35,7 +39,7 @@ module.exports = {
     let self = this;
     //失去焦点后隐藏
     _.on(window,"click",(e)=>{
-      if(self.open && !self.$el.nextSibling.contains(e.target)){
+      if(self.open && self.$el && !self.$el.nextSibling.contains(e.target)){
         self.toggleOpen();
       }
     });
@@ -52,6 +56,7 @@ module.exports = {
   methods:{
     toggleOpen(e){
       if(e)e.preventDefault();
+      if(this.disabled)return;
       this.open = !this.open;
       this.classes['open'] = this.open;
       if(this.isShow){

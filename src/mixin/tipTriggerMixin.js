@@ -1,4 +1,3 @@
-var Vue = require('vue');
 var elOffset = require('../util/elOffset.js');
 module.exports = {
   props:{
@@ -23,7 +22,7 @@ module.exports = {
     }
   },
   ready:function(){
-    var btnEl = this.$children[1].$el;
+    var btnEl = this.$children[0].$el;
 
     //动态绑定事件
     switch(this.trigger){
@@ -45,9 +44,9 @@ module.exports = {
       var self = this;
       self.show = !self.show;
       //等tooltip出现在dom以后才能获取
-      Vue.nextTick(function(){
+      this.$nextTick(function(){
         if(self.show){
-          var vButton = self.$children[1];
+          var vButton = self.$children[0];
           var vTooltip = self.$refs[self.tag] || self.$children[1];
 
           var btnElset = new elOffset(vButton.$el);

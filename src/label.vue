@@ -1,8 +1,8 @@
 <template lang="jade">
 span.label(v-bind:class='classes')
-  span(v-if='href === null')
+  span(v-if='!hasHref')
     slot
-  anchor(v-if='href != null',v-bind:href='href',v-bind:target='target')
+  anchor(v-if='hasHref',v-bind:href='href',v-bind:target='target')
     slot
 </template>
 <script>
@@ -24,6 +24,11 @@ span.label(v-bind:class='classes')
       return{
         tag:'label',
         classes:{}
+      }
+    },
+    computed:{
+      hasHref(){
+        return !!this.href && this.href !== "javascript:;";
       }
     },
     components:{

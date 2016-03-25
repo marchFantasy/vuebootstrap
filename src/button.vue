@@ -1,5 +1,5 @@
 <template lang="jade">
-button(v-bind:class='classes',v-bind:type='type')
+button(v-bind:class='classes',v-bind:type='type',v-bind:disabled="disabled")
   slot
 </template>
 
@@ -26,7 +26,11 @@ export default{
     },
     'onClick':{
       type:Function,
-      default:null
+      default:()=>{}
+    },
+    'disabled':{
+      type:Boolean,
+      default:false
     }
   },
   data(){

@@ -1,6 +1,6 @@
 <template lang='jade'>
 div.thumbnail
-  anchor(v-bind:href='href',v-bind:target='target')
+  anchor(v-bind:href='href',v-bind:target='target',v-bind:disabled='disabled')
     img(v-bind:src='src',v-bind:alt='alt')
   div.caption
     slot

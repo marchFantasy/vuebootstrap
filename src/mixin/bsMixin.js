@@ -6,7 +6,7 @@ module.exports = {
     },
     bsSize:{
       type:String,
-      default:''
+      default:'md'
     }
   },
   created:function(){
@@ -29,7 +29,7 @@ module.exports = {
 
       }
       //大小，例如：btn-sm
-      if(self.bsSize && self.bsSize != ''){
+      if(self.bsSize && self.bsSize !== 'md'){
         self.classes[self.tag+character+self.bsSize] = true;
       }
 

@@ -2,7 +2,10 @@
 span.label(v-bind:class='classes')
   span(v-if='!hasHref')
     slot
-  anchor(v-if='hasHref',v-bind:href='href',v-bind:target='target')
+  anchor(v-if='hasHref',
+        v-bind:href='href',
+        v-bind:target='target',
+        v-bind:disabled='disabled')
     slot
 </template>
 <script>

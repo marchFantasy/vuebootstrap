@@ -1,3 +1,15 @@
+<template lang="jade">
+  li(v-bind:class="{'disabled':disabled,'dropdown-header':header,'divider':divider}")
+    anchor(v-if="!header && !divider",
+          v-bind:href='href',
+          v-bind:target='target',
+          v-bind:on-click='onClick',
+          v-bind:disabled='disabled')
+      slot
+    slot(v-if="header && !divider")
+</template>
+
+<script>
 /**
  * menuitem
  * tag:MenuItem
@@ -7,18 +19,24 @@
  * 默认情况请使用：
  * import MenuItem from 'menuitem.vue';
  */
-
-<template lang="jade">
-  li
-    anchor(v-bind:href='href',v-bind:target='target',v-bind:click-handle='clickHandle')
-      slot
-</template>
-
-<script>
   import Anchor from './anchor.vue';
   import LinkMixin from './mixin/linkMixin.js';
   export default{
     mixins:[LinkMixin],
+    props:{
+      header:{
+        type:Boolean,
+        default:false
+      },
+      divider:{
+        type:Boolean,
+        default:false
+      },
+      onClick:{
+        type:Function,
+        default:()=>{}
+      }
+    },
     components:{
       Anchor
     }

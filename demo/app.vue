@@ -22,9 +22,21 @@ div.container
       span(slot="dropdown-title")
         | 下拉框
         i.caret
-      menu-item(v-for='lk in linkList',v-bind:href='lk.url',slot="dropdown-menu")  {{lk.name}}
+      menu-item(v-for='lk in linkList',
+                v-bind:href='lk.url',
+                v-bind:on-click="clickButton",
+                v-bind:header="true",
+                slot="dropdown-menu")  {{lk.name}}
+      menu-item(v-bind:divider="true")
     split-button(title='分裂下拉按钮',bs-style='primary',v-on:click='clickButton')
       menu-item(v-for='lk in linkList',v-bind:href='lk.url')  {{lk.name}}
+    h4 导航
+    nav(is="nav",bs-style="pills",v-bind:justified="true")
+      nav-item(v-for='lk in linkList',
+               v-bind:href='lk.url',
+               v-bind:active="lk.active",
+               v-bind:disabled="lk.disabled",
+               v-bind:on-click='clickButton') {{lk.name}}
     h4 模态框
     button(@click='toggleModal',bs-style='warning') 运行模态框
     //v-bind:on-before-hide="beforeClose"
@@ -135,6 +147,8 @@ import Label from '../src/label.vue';
 import Button from '../src/button.vue';
 import ButtonGroup from '../src/buttonGroup.vue';
 import DropdownButton from '../src/dropdownButton.vue';
+import Nav from '../src/nav.vue';
+import NavItem from '../src/navItem.vue';
 import MenuItem from '../src/menuitem.vue';
 import SplitButton from '../src/splitButton.vue';
 
@@ -171,7 +185,7 @@ export default{
         tooltipStyle:{position:'relative',height:'30px'},
         popoverStyle:{position:'relative',height:'100px'},
         styleList:['default',"primary","success","info","warning","danger"],
-        linkList:[{name:'link1',url:'#'},{name:'link2',url:'http://www.baidu.com'}],
+        linkList:[{name:'link1',url:'#',active:false,disabled:true},{name:'link2',url:'http://www.baidu.com'}],
         value:"form1",
         progress:12,
         activePage:6,
@@ -224,6 +238,8 @@ export default{
     components:{
       Label,
       MenuItem,
+      Nav,
+      NavItem,
       Button,
       ButtonGroup,
       DropdownButton,

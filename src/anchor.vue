@@ -1,3 +1,12 @@
+
+<template lang="jade">
+  a(href='{{href}}',
+  target='{{target}}',
+  @click='clickHandle',
+  v-bind:class="{'disabled':disabled}")
+    slot
+</template>
+<script>
 /**
  * anchor
  * tag:Anchor
@@ -8,26 +17,21 @@
  * 不能命名link，或者添加is属性，否则不会成功，默认情况请使用：
  * import Anchor from 'anchor.vue';
  */
-<template lang="jade">
-  a(href='{{href}}',target='{{target}}',@click='clickHandle')
-    slot
-</template>
-<script>
 import LinkMixin from './mixin/linkMixin.js';
 export default{
   mixins:[LinkMixin],
   props:{
     onClick:{
       type:Function,
-      default:null
+      default:()=>{}
     }
   },
   methods:{
     clickHandle(e){
-      if(!this.href){
+      if(!this.href || this.href === 'javascript:;' || this.disabled){
         e.preventDefault();
       }
-      if(this.onClick){
+      if(this.onClick && !this.disabled){
         this.onClick(e);
       }
 

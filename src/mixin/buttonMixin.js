@@ -10,7 +10,7 @@ module.exports = {
     },
     'bsSize':{
       type:String,
-      default:''
+      default:'md'
     }
   }
 }
